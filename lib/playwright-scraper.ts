@@ -131,13 +131,13 @@ export async function scrapeWithPlaywright(url: string, useProxy = false): Promi
         title: document.title,
         description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
         currency,
-        prices: [...new Set(prices)].slice(0, 10),
+        prices: Array.from(new Set(prices)).slice(0, 10),
         headlines: headlines.slice(0, 10),
-        features: [...new Set(features)].slice(0, 20),
+        features: Array.from(new Set(features)).slice(0, 20),
         testimonials: testimonials.slice(0, 5),
-        guarantees: [...new Set(guarantees)].slice(0, 3),
-        urgencyTriggers: [...new Set(urgencyTriggers)].slice(0, 5),
-        ctaButtons: [...new Set(ctaButtons)].slice(0, 10),
+        guarantees: Array.from(new Set(guarantees)).slice(0, 3),
+        urgencyTriggers: Array.from(new Set(urgencyTriggers)).slice(0, 5),
+        ctaButtons: Array.from(new Set(ctaButtons)).slice(0, 10),
         businessType
       }
     }, url)

@@ -115,6 +115,7 @@ export default function HomePage() {
     leadData: {}
   })
   const [userResponse, setUserResponse] = useState('')
+  const analysisStartTimeRef = useRef<number>(Date.now())
   const router = useRouter()
   const feedContainerRef = useRef<HTMLDivElement>(null)
   
@@ -138,7 +139,7 @@ export default function HomePage() {
         setFeedUpdates(prev => [...prev, {
           id: `nudge_${Date.now()}`,
           timestamp: new Date(),
-          type: 'info',
+          type: 'teaser',
           icon: '👋',
           message: "Hello? Are you still there?",
           detail: "I'm ready when you are! Or are you going to leave me hanging? 😅",
@@ -151,7 +152,7 @@ export default function HomePage() {
             setFeedUpdates(prev => [...prev, {
               id: `nudge2_${Date.now()}`,
               timestamp: new Date(),
-              type: 'info',
+              type: 'teaser',
               icon: '🤔',
               message: "Come on, give me something to work with!",
               detail: "Even a quick answer helps me customize your analysis better. Type anything!",
@@ -199,7 +200,7 @@ export default function HomePage() {
   const startAnalysis = async () => {
     if (!url) return
     
-    const analysisStartTime = Date.now()
+    analysisStartTimeRef.current = Date.now()
     setIsAnalyzing(true)
     setAnalysisError(null)
     
@@ -217,7 +218,7 @@ export default function HomePage() {
     setFeedUpdates([{
       id: `queue_position_${Date.now()}`,
       timestamp: new Date(),
-      type: 'info',
+      type: 'teaser',
       icon: '🚦',
       message: `You're #${currentPosition} in the analysis queue`,
       detail: "Estimated wait time: 2-3 minutes",
@@ -331,7 +332,7 @@ export default function HomePage() {
       setFeedUpdates(prev => [...prev, {
         id: `story_start_${Date.now()}`,
         timestamp: new Date(),
-        type: 'info',
+        type: 'teaser',
         icon: '💭',
         message: story.setup,
         detail: story.problem,
@@ -375,7 +376,7 @@ export default function HomePage() {
           setFeedUpdates(prev => [...prev, {
             id: `bg_analysis_${Date.now()}`,
             timestamp: new Date(),
-            type: 'info',
+            type: 'teaser',
             icon: '⚡',
             message: "AI is analyzing your website in the background...",
             detail: "Scanning for opportunities while we chat",
@@ -433,15 +434,15 @@ export default function HomePage() {
           })
         })
         
-        const aiData = await aiResponse.json()
-        console.log('🤖 Background AI analysis complete:', aiData)
+        const aiData = await aiResponse.json();
+        // console.log('🤖 Background AI analysis complete:', aiData)
         
         // Store the background analysis results
-        window.backgroundAnalysisResults = aiData
+        (window as any).backgroundAnalysisResults = aiData;
         
       } catch (error) {
-        console.error('Background analysis error:', error)
-        window.backgroundAnalysisResults = null
+        // console.error('Background analysis error:', error)
+        (window as any).backgroundAnalysisResults = null;
       }
     }
     
@@ -684,7 +685,7 @@ export default function HomePage() {
     setFeedUpdates(prev => [...prev, {
       id: `user_msg_${Date.now()}`,
       timestamp: new Date(),
-      type: 'info',
+      type: 'teaser',
       icon: '👤',
       message: `You: ${currentMessage}`,
       detail: "",
@@ -695,7 +696,7 @@ export default function HomePage() {
     setFeedUpdates(prev => [...prev, {
       id: `ai_thinking_${Date.now()}`,
       timestamp: new Date(),
-      type: 'info',
+      type: 'teaser',
       icon: '💬',
       message: "Claude is typing",
       detail: "...",
@@ -743,7 +744,7 @@ export default function HomePage() {
         const extractedData: any = {}
         
         // Check if response contains name
-        if (aiData.response.toLowerCase().includes('name') || prev.step === 2) {
+        if (aiData.response.toLowerCase().includes('name')) {
           extractedData.name = currentMessage
         }
         // Check if response contains email
@@ -759,10 +760,10 @@ export default function HomePage() {
           extractedData.competitor = currentMessage
         }
         // Store business/challenge info
-        else if (prev.step === 0) {
+        else if (aiConversation.step === 0) {
           extractedData.business = currentMessage
         }
-        else if (prev.step === 1) {
+        else if (aiConversation.step === 1) {
           extractedData.challenge = currentMessage
         }
         
@@ -825,7 +826,7 @@ export default function HomePage() {
     setFeedUpdates(prev => [...prev, {
       id: `ai_processing_${Date.now()}`,
       timestamp: new Date(),
-      type: 'info',
+      type: 'teaser',
       icon: '🧠',
       message: `Awesome ${userName}! Now let me combine my background analysis with your conversation insights.`,
       detail: `Personalizing results for ${businessInfo} - especially targeting your ${mainChallenge} challenge`,
@@ -835,7 +836,7 @@ export default function HomePage() {
     setTimeout(async () => {
       try {
         // Check if we have background analysis results
-        const backgroundResults = window.backgroundAnalysisResults
+        const backgroundResults = (window as any).backgroundAnalysisResults
         let finalAnalysis = null
         
         if (backgroundResults && backgroundResults.success) {
@@ -843,7 +844,7 @@ export default function HomePage() {
           setFeedUpdates(prev => [...prev, {
             id: `combining_${Date.now()}`,
             timestamp: new Date(),
-            type: 'info',
+            type: 'teaser',
             icon: '⚡',
             message: 'Combining background AI analysis with your conversation...',
             detail: 'This makes the insights way more targeted!',
@@ -966,7 +967,7 @@ export default function HomePage() {
           
           // Update knowledge base with enhanced results
           updateKnowledgeBase(url, {
-            timeOnSite: Math.floor((Date.now() - analysisStartTime) / 1000),
+            timeOnSite: Math.floor((Date.now() - analysisStartTimeRef.current) / 1000),
             completedConversation: true,
             userName,
             businessInfo,
@@ -1341,7 +1342,7 @@ export default function HomePage() {
                   {/* Floating Question Box - Above Feed */}
                   {aiConversation.isWaitingForResponse && (() => {
                     // Find the latest message with needsResponse
-                    const latestQuestion = [...feedUpdates].reverse().find(update => update.needsResponse)
+                    const latestQuestion = [...feedUpdates].reverse().find(update => (update as any).needsResponse)
                     if (!latestQuestion) return null
                     
                     return (
@@ -1366,9 +1367,9 @@ export default function HomePage() {
                                 </p>
                                 
                                 {/* Multiple Choice Buttons or Input Field */}
-                                {latestQuestion.multipleChoice ? (
+                                {(latestQuestion as any).multipleChoice ? (
                                   <div className="grid grid-cols-2 gap-3">
-                                    {latestQuestion.multipleChoice.map((option: any) => (
+                                    {(latestQuestion as any).multipleChoice.map((option: any) => (
                                       <button
                                         key={option.value}
                                         onClick={() => {

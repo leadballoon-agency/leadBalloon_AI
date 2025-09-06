@@ -57,10 +57,10 @@ export async function scrapeFacebookAds(businessName: string, pageId?: string): 
       // Use provided page ID for direct access
       searchUrl = `https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&view_all_page_id=${pageId}`
       console.log(`📌 Using page ID: ${pageId}`)
-    } else if (knownCompetitor?.facebookPageId) {
+    } else if ((knownCompetitor as any)?.facebookPageId) {
       // Use known page ID from our database
-      searchUrl = `https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&view_all_page_id=${knownCompetitor.facebookPageId}`
-      console.log(`📌 Found known competitor: ${knownCompetitor.facebookPageName}`)
+      searchUrl = `https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&view_all_page_id=${(knownCompetitor as any).facebookPageId}`
+      console.log(`📌 Found known competitor: ${(knownCompetitor as any).facebookPageName}`)
     } else {
       // Fall back to search by name
       searchUrl = `https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=${encodeURIComponent(businessName)}&media_type=all`
@@ -170,7 +170,7 @@ function extractInsights(ads: FacebookAd[]) {
   
   // Extract price points
   const priceMatches = allText.match(/[£$]\s*[\d,]+/g) || []
-  const pricePoints = [...new Set(priceMatches)].slice(0, 5)
+  const pricePoints = Array.from(new Set(priceMatches)).slice(0, 5)
   
   // Extract urgency tactics
   const urgencyPatterns = [
@@ -200,7 +200,7 @@ function extractInsights(ads: FacebookAd[]) {
   )
   
   return {
-    commonOffers: [...new Set(commonOffers)],
+    commonOffers: Array.from(new Set(commonOffers)),
     pricePoints,
     urgencyTactics,
     guarantees

@@ -125,7 +125,7 @@ export default function KnowledgeBankPage() {
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gold-500/20">
               <div className="text-3xl mb-2">📱</div>
               <div className="text-2xl font-bold text-gold-400">
-                {niches.reduce((sum, n) => sum + (n.winningAds?.ads?.length || 0), 0)}
+                {niches.reduce((sum, n) => sum + (n.winningAds?.totalAdsAnalyzed || 0), 0)}
               </div>
               <div className="text-gray-400">Winning Ads</div>
             </div>
@@ -149,8 +149,8 @@ export default function KnowledgeBankPage() {
                       <h3 className="font-bold text-gold-400 capitalize">{niche.niche}</h3>
                       <div className="mt-2 text-sm text-gray-400">
                         <div>📊 {niche.competitorAnalysis?.length || 0} competitors</div>
-                        <div>📱 {niche.winningAds?.ads?.length || 0} ads</div>
-                        <div>💡 {niche.insights?.length || 0} insights</div>
+                        <div>📱 {niche.winningAds?.totalAdsAnalyzed || 0} ads</div>
+                        <div>💡 {0} insights</div>
                       </div>
                     </div>
                   ))}

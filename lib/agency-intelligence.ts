@@ -99,10 +99,10 @@ export function extractAgencyIntelligence(ads: any[]): AgencyIntelligence {
   
   return {
     copyFormulas: {
-      hooks: [...new Set(hooks)],
-      painPoints: [...new Set(painPoints)],
+      hooks: Array.from(new Set(hooks)),
+      painPoints: Array.from(new Set(painPoints)),
       solutions: extractSolutions(ads),
-      ctas: [...new Set(ctas)]
+      ctas: Array.from(new Set(ctas))
     },
     offerStructure: {
       leadMagnets: leadMagnets.filter(Boolean) as string[],
@@ -181,7 +181,7 @@ function extractGuarantees(ads: any[]): string[] {
     return ''
   }).filter(Boolean)
   
-  return [...new Set(guarantees)]
+  return Array.from(new Set(guarantees))
 }
 
 function detectVisualStyle(ads: any[]): string {

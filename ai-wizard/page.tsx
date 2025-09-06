@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 // Dynamically import the assessment widget for preview
 const AssessmentWidget = dynamic(
-  () => import('../assessment-widget/page'),
+  () => import('../widgets/assessment-widget/page'),
   { 
     ssr: false,
     loading: () => (

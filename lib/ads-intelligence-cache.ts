@@ -405,7 +405,7 @@ function analyzeCollectedAds(ads: FacebookAdData[]): NicheInsights {
   const hooks = headlines.filter((h, i) => headlines.indexOf(h) === i).slice(0, 5)
   
   const prices = ads.map(ad => ad.pricePoint).filter(Boolean) as string[]
-  const uniquePrices = [...new Set(prices)].slice(0, 5)
+  const uniquePrices = Array.from(new Set(prices)).slice(0, 5)
   
   const offers = ads.map(ad => ad.offerType)
   const offerCounts = offers.reduce((acc, offer) => {
@@ -445,7 +445,7 @@ function analyzeCollectedAds(ads: FacebookAdData[]): NicheInsights {
     winningHooks: longRunners.map(ad => ad.headline).slice(0, 5),
     priceRanges: uniquePrices,
     commonOffers: topOffers,
-    urgencyTactics: [...new Set(ads.map(ad => ad.urgencyType).filter(Boolean))] as string[],
+    urgencyTactics: Array.from(new Set(ads.map(ad => ad.urgencyType).filter(Boolean))) as string[],
     guarantees: ads.filter(ad => ad.offerType === 'guarantee-based').map(ad => ad.primaryText.substring(0, 100)).slice(0, 3),
     avgAdRuntime: Math.floor(ads.reduce((sum, ad) => sum + ad.daysRunning, 0) / ads.length),
     topPerformers

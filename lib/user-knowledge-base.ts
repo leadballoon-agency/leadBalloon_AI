@@ -157,6 +157,7 @@ export function generateFollowUpStrategy(profile: UserProfile): FollowUpStrategy
       {
         type: 'phone',
         delay: '1 hour',
+        template: 'discovery-call',
         script: 'discovery-call',
         note: 'Reference their main challenge and the specific solution'
       },
@@ -182,7 +183,7 @@ export function generateFollowUpStrategy(profile: UserProfile): FollowUpStrategy
         type: 'email',
         delay: '2 days',
         template: 'competitor-intel',
-        subject: 'What your competitors don't want you to know'
+        subject: "What your competitors don't want you to know"
       },
       {
         type: 'email',

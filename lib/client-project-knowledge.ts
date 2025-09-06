@@ -388,7 +388,7 @@ export function storeClientProject(project: ClientProject): void {
 export function getProjectsByNiche(niche: string): ClientProject[] {
   if (typeof window !== 'undefined') {
     const projects = JSON.parse(localStorage.getItem('clientProjects') || '{}')
-    return Object.values(projects).filter((p: ClientProject) => 
+    return (Object.values(projects) as ClientProject[]).filter((p: ClientProject) => 
       p.niche.toLowerCase().includes(niche.toLowerCase())
     )
   }

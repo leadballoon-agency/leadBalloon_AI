@@ -68,7 +68,7 @@ export class InteractiveJourneyBuilder {
       {
         name: 'Market Leader',
         url: 'https://example-competitor.com',
-        reason: 'They've been running the same FB ad for 94 days'
+        reason: "They've been running the same FB ad for 94 days"
       },
       {
         name: 'Rising Star',
@@ -106,7 +106,7 @@ export class InteractiveJourneyBuilder {
           collectsData: ['business_stage']
         }
       ],
-      fallback: 'We'll research competitor pricing and show you the sweet spot'
+      fallback: "We'll research competitor pricing and show you the sweet spot"
     }
   }
 
@@ -203,7 +203,7 @@ export class InteractiveJourneyBuilder {
           collectsData: ['business_type', 'unique_model']
         }
       ],
-      fallback: 'Tell us your business and we'll find your perfect competitors'
+      fallback: "Tell us your business and we'll find your perfect competitors"
     }
   }
 
@@ -243,7 +243,7 @@ export class InteractiveJourneyBuilder {
           collectsData: ['market_stage']
         }
       ],
-      fallback: 'We'll find your top 5 competitors and their weaknesses'
+      fallback: "We'll find your top 5 competitors and their weaknesses"
     }
   }
 

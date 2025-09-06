@@ -132,7 +132,7 @@ function getNicheKeywords(url: string, businessType?: string): string[] {
     keywords.push(...nicheMap[businessType])
   }
   
-  return [...new Set(keywords)]
+  return Array.from(new Set(keywords))
 }
 
 export async function GET() {

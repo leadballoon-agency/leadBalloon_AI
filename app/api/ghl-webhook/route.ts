@@ -17,8 +17,10 @@ const GHL_CONFIG = {
  * Send lead to GoHighLevel
  */
 export async function POST(req: NextRequest) {
+  let leadData: any
+  
   try {
-    const leadData = await req.json()
+    leadData = await req.json()
     
     // Format data for GHL
     const ghlPayload = formatForGHL(leadData)
@@ -39,7 +41,7 @@ export async function POST(req: NextRequest) {
     console.log('✅ Lead sent to GHL:', {
       name: ghlPayload.name,
       email: ghlPayload.email,
-      leadScore: ghlPayload.customFields.leadScore
+      leadScore: ghlPayload.customFields.lead_score
     })
     
     return NextResponse.json({ 
@@ -52,7 +54,9 @@ export async function POST(req: NextRequest) {
     console.error('GHL webhook error:', error)
     
     // Store locally if GHL fails (backup)
-    await storeLeadLocally(leadData)
+    if (leadData) {
+      await storeLeadLocally(leadData)
+    }
     
     return NextResponse.json({ 
       success: false, 

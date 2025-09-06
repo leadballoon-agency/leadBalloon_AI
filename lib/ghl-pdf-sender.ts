@@ -18,7 +18,7 @@ export async function uploadPdfToGHL(contactId: string, pdfBuffer: Buffer) {
   
   // Upload file to GHL
   const formData = new FormData()
-  formData.append('file', new Blob([pdfBuffer], { type: 'application/pdf' }), 'website-analysis.pdf')
+  formData.append('file', new Blob([pdfBuffer as any], { type: 'application/pdf' }), 'website-analysis.pdf')
   formData.append('contactId', contactId)
   
   const response = await fetch(`https://rest.gohighlevel.com/v1/contacts/${contactId}/files`, {
@@ -59,9 +59,11 @@ export async function hostPdfTemporarily(html: string): Promise<string> {
   }
   
   // Option C: Use temporary storage service
+  const formData = new FormData()
+  formData.append('file', new Blob([html], { type: 'text/html' }))
   const response = await fetch('https://file.io', {
     method: 'POST',
-    body: new FormData().append('file', new Blob([html], { type: 'text/html' })),
+    body: formData,
   })
   
   const data = await response.json()

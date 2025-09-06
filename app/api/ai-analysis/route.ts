@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
       success: false,
       message: 'AI analysis temporarily unavailable',
       fallback: true,
-      insights: getBasicInsights(context.businessType)
+      insights: getBasicInsights('')
     })
   }
 }

@@ -69,7 +69,8 @@ export function findRelevantKnowledge(businessDescription: string): RelevantKnow
   
   // If no exact match, use similarity scoring
   if (relevantFolders.size === 0) {
-    relevantFolders.add(...findSimilarNiches(description))
+    const similarNiches = findSimilarNiches(description)
+    similarNiches.forEach(niche => relevantFolders.add(niche))
   }
   
   return {

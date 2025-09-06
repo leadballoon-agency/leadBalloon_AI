@@ -121,7 +121,7 @@ export class OxylabsAnalyzer {
         urgencyTriggers,
         guarantees,
         socialProof,
-        ctaButtons: [...new Set(ctaButtons)], // Remove duplicates
+        ctaButtons: Array.from(new Set(ctaButtons)), // Remove duplicates
         headlines,
         offers
       };

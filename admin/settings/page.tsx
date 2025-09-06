@@ -9,15 +9,16 @@ const AssessmentWidget = dynamic(() => import('../../widgets/assessment-widget/p
 
 // Step components
 import DreamOutcomeStep from './steps/DreamOutcomeStep'
-import ValueStackStep from './steps/ValueStackStep'
-import PricingStep from './steps/PricingStep'
-import GuaranteeStep from './steps/GuaranteeStep'
-import UrgencyStep from './steps/UrgencyStep'
-import PreviewOfferStep from './steps/PreviewOfferStep'
-import QualificationStep from './steps/QualificationStep'
-import ThresholdsStep from './steps/ThresholdsStep'
-import LaunchStyleStep from './steps/LaunchStyleStep'
-import TrackingStep from './steps/TrackingStep'
+// TODO: Create missing step components
+// import ValueStackStep from './steps/ValueStackStep'
+// import PricingStep from './steps/PricingStep'
+// import GuaranteeStep from './steps/GuaranteeStep'
+// import UrgencyStep from './steps/UrgencyStep'
+// import PreviewOfferStep from './steps/PreviewOfferStep'
+// import QualificationStep from './steps/QualificationStep'
+// import ThresholdsStep from './steps/ThresholdsStep'
+// import LaunchStyleStep from './steps/LaunchStyleStep'
+// import TrackingStep from './steps/TrackingStep'
 
 interface ConfigData {
   dreamOutcome: string
@@ -70,15 +71,16 @@ interface ConfigData {
 
 const STEPS = [
   { id: 'dream-outcome', name: 'Dream Outcome', component: DreamOutcomeStep },
-  { id: 'value-stack', name: 'Value Stack', component: ValueStackStep },
-  { id: 'pricing', name: 'Set Price', component: PricingStep },
-  { id: 'guarantee', name: 'Guarantee', component: GuaranteeStep },
-  { id: 'urgency', name: 'Urgency', component: UrgencyStep },
-  { id: 'preview-offer', name: 'Preview Offer', component: PreviewOfferStep },
-  { id: 'qualification', name: 'Qualification', component: QualificationStep },
-  { id: 'thresholds', name: 'Thresholds', component: ThresholdsStep },
-  { id: 'launch-style', name: 'Launch Style', component: LaunchStyleStep },
-  { id: 'tracking', name: 'Tracking', component: TrackingStep }
+  // TODO: Add these components when they're created
+  // { id: 'value-stack', name: 'Value Stack', component: ValueStackStep },
+  // { id: 'pricing', name: 'Set Price', component: PricingStep },
+  // { id: 'guarantee', name: 'Guarantee', component: GuaranteeStep },
+  // { id: 'urgency', name: 'Urgency', component: UrgencyStep },
+  // { id: 'preview-offer', name: 'Preview Offer', component: PreviewOfferStep },
+  // { id: 'qualification', name: 'Qualification', component: QualificationStep },
+  // { id: 'thresholds', name: 'Thresholds', component: ThresholdsStep },
+  // { id: 'launch-style', name: 'Launch Style', component: LaunchStyleStep },
+  // { id: 'tracking', name: 'Tracking', component: TrackingStep }
 ]
 
 export default function ElegantConfigurator() {
@@ -272,9 +274,9 @@ export default function ElegantConfigurator() {
 
               <div className="bg-gray-900 max-h-[600px] overflow-y-auto">
                 {currentStep <= 5 ? (
-                  <OfferWidget config={config} />
+                  <OfferWidget />
                 ) : (
-                  <AssessmentWidget config={config} />
+                  <AssessmentWidget />
                 )}
               </div>
 

@@ -295,7 +295,7 @@ export class KnowledgeImportSystem {
     }
     
     // Build file for each niche
-    for (const [niche, imports] of nicheMap) {
+    for (const [niche, imports] of Array.from(nicheMap)) {
       const file = await this.mergeImportsToFile(niche, imports)
       files.push(file)
     }
@@ -311,65 +311,114 @@ export class KnowledgeImportSystem {
     imports: ProcessedImport[]
   ): Promise<NicheIntelligenceFile> {
     const file: NicheIntelligenceFile = {
+      id: `${niche}_${Date.now()}`,
       niche,
+      location: 'Global',
       lastUpdated: new Date(),
-      version: '1.0.0',
-      status: 'imported',
       
       marketResearch: {
         marketSize: '',
         growthRate: '',
-        trends: [],
-        challenges: [],
-        opportunities: [],
-        keywords: this.extractKeywords(imports),
-        demographics: {
-          age: '',
-          gender: '',
-          income: '',
-          interests: []
-        }
+        seasonality: [],
+        regulations: [],
+        averageCustomerValue: '',
+        customerLifetime: '',
+        primaryPainPoints: [],
+        secondaryPainPoints: [],
+        hiddenPainPoints: [],
+        surfaceDesires: [],
+        deepDesires: [],
+        emotionalTriggers: [],
+        logicalJustifications: [],
+        urgencyTriggers: []
       },
       
       competitorAnalysis: this.mergeCompetitors(imports),
       
       winningAds: {
-        ads: this.mergeAds(imports),
-        patterns: [],
-        hooks: [],
-        offers: []
+        totalAdsAnalyzed: this.mergeAds(imports).length,
+        platforms: ['facebook', 'google'],
+        topPerformers: [],
+        commonHeadlines: [],
+        commonOffers: [],
+        commonCTAs: [],
+        emotionalTriggers: [],
+        urgencyTypes: [],
+        workingFormulas: []
       },
       
       pricingStrategy: {
-        marketRange: { min: 0, max: 0 },
-        sweetSpot: 0,
-        positioning: 'value',
-        justifications: []
+        marketPriceRange: {
+          low: '£0',
+          average: '£0',
+          high: '£0',
+          premium: '£0'
+        },
+        competitorPricing: [],
+        recommendedPricing: {
+          entry: '£0',
+          core: '£0',
+          premium: '£0',
+          justification: ''
+        },
+        valueStack: [],
+        priceAnchoring: [],
+        paymentOptions: []
       },
       
       offers: {
-        core: [],
-        upsells: [],
-        bonuses: [],
-        guarantees: []
+        dreamOutcome: '',
+        perceivedLikelihood: '',
+        timeDelay: '',
+        effortAndSacrifice: '',
+        offers: [],
+        seasonal: [],
+        promotional: [],
+        backend: []
       },
       
       copy: {
         headlines: [],
-        subheadlines: [],
-        bodyCopy: [],
-        ctas: [],
-        socialProof: [],
-        objectionHandlers: []
+        emailTemplates: [],
+        landingPages: [],
+        adTemplates: []
       },
       
-      insights: this.mergeInsights(imports),
+      dataQuality: 'basic' as const,
       
-      dataQuality: {
-        score: this.calculateDataQuality(imports),
-        completeness: this.calculateCompleteness(imports),
-        sources: ['import'],
-        lastValidated: new Date()
+      // AI + Manual Augmentation
+      aiInsights: {
+        gpt4Analysis: null,
+        claudeAnalysis: null,
+        uniqueAngles: [],
+        positioningOptions: [],
+        contentTopics: [],
+        hookIdeas: []
+      },
+      
+      manualResearch: {
+        researcher: '',
+        hoursSpent: 0,
+        discoveries: [],
+        competitorIntel: [],
+        insiderInfo: [],
+        communityInsights: []
+      },
+      
+      // Growing Knowledge Base
+      customerResults: [],
+      
+      patterns: {
+        winningPatterns: [],
+        losingPatterns: [],
+        seasonalTrends: []
+      },
+      
+      opportunities: {
+        gaps: [],
+        blueOceans: [],
+        emergingTrends: [],
+        disruptionPotential: []
       }
     }
     
@@ -462,7 +511,7 @@ export class KnowledgeImportSystem {
     
     // Look for competitor patterns
     const competitorRegex = /^[\*\-]\s*(.*?):\s*(https?:\/\/[^\s]+)/gm
-    const matches = content.matchAll(competitorRegex)
+    const matches = Array.from(content.matchAll(competitorRegex))
     
     for (const match of matches) {
       competitors.push({
@@ -485,8 +534,8 @@ export class KnowledgeImportSystem {
     const headlineRegex = /headline[:\s]+"([^"]+)"/gi
     const copyRegex = /copy[:\s]+"([^"]+)"/gi
     
-    const headlines = [...content.matchAll(headlineRegex)]
-    const copies = [...content.matchAll(copyRegex)]
+    const headlines = Array.from(content.matchAll(headlineRegex))
+    const copies = Array.from(content.matchAll(copyRegex))
     
     for (let i = 0; i < Math.max(headlines.length, copies.length); i++) {
       ads.push({
@@ -557,8 +606,8 @@ export class KnowledgeImportSystem {
         } else {
           // Merge data
           const existing = competitorMap.get(key)
-          existing.strengths = [...new Set([...existing.strengths, ...comp.strengths])]
-          existing.weaknesses = [...new Set([...existing.weaknesses, ...comp.weaknesses])]
+          existing.strengths = Array.from(new Set([...existing.strengths, ...comp.strengths]))
+          existing.weaknesses = Array.from(new Set([...existing.weaknesses, ...comp.weaknesses]))
           if (!existing.pricing && comp.pricing) existing.pricing = comp.pricing
           if (!existing.offer && comp.offer) existing.offer = comp.offer
         }
@@ -575,30 +624,24 @@ export class KnowledgeImportSystem {
       for (const ad of imp.ads) {
         ads.push({
           id: `import_${Date.now()}_${Math.random()}`,
-          platform: 'imported',
+          title: ad.headline || 'Imported Ad',
           advertiser: imp.niche,
-          adCopy: {
-            headline: ad.headline,
-            primaryText: ad.copy,
-            description: '',
-            callToAction: ad.cta
-          },
-          performance: {
-            runTime: 0,
-            impressions: 0,
-            engagement: 0
-          },
+          industry: imp.niche,
+          platform: 'facebook' as const,
+          headline: ad.headline,
+          bodyCopy: ad.copy,
+          cta: ad.cta || '',
           analysis: {
-            score: 0,
-            strengths: [],
-            weaknesses: [],
-            principles: []
+            hook: ad.headline || '',
+            emotionalTriggers: [],
+            persuasionTechniques: [],
+            valueProposition: '',
+            urgencyElements: [],
+            socialProof: []
           },
-          firstSeen: new Date(),
-          lastSeen: new Date(),
-          isActive: false,
-          url: '',
-          creatives: []
+          whyItWorks: [],
+          swipeNotes: [],
+          dateCollected: new Date().toISOString()
         })
       }
     }
@@ -670,11 +713,11 @@ export class KnowledgeImportSystem {
   }
   
   private countAds(files: NicheIntelligenceFile[]): number {
-    return files.reduce((sum, f) => sum + f.winningAds.ads.length, 0)
+    return files.reduce((sum, f) => sum + f.winningAds.totalAdsAnalyzed, 0)
   }
   
   private countInsights(files: NicheIntelligenceFile[]): number {
-    return files.reduce((sum, f) => sum + f.insights.length, 0)
+    return files.reduce((sum, f) => sum + (f.aiInsights.uniqueAngles?.length || 0), 0)
   }
   
   /**

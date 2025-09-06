@@ -1,7 +1,7 @@
 // AI Website Analyzer for LeadBalloon
 // This analyzes websites and generates optimized assessment configurations
 
-import { assessmentConfig, valueSettings } from '../assessment-widget/config'
+import { assessmentConfig, valueSettings } from '../widgets/assessment-widget/config'
 
 export interface WebsiteAnalysis {
   url: string
@@ -284,7 +284,7 @@ export async function generateAssessmentConfig(
       condition: 'timeline === "research" && budget === "checking"',
       score: 30,
       message: 'We\'ll send you helpful information',
-      route: 'nurture'
+      route: 'not-qualified'
     }
   ]
 

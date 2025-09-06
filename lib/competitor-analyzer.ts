@@ -367,7 +367,7 @@ export async function analyzeCompetition(industry: string) {
       averageDaysRunning: Math.round(
         winningAds.reduce((sum, ad) => sum + ad.daysRunning, 0) / winningAds.length
       ),
-      topCompetitors: [...new Set(winningAds.map(ad => ad.pageName))].slice(0, 10)
+      topCompetitors: Array.from(new Set(winningAds.map(ad => ad.pageName))).slice(0, 10)
     },
     insights,
     recommendations: generateRecommendations(insights)

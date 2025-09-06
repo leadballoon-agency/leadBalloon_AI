@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createUser, createAssessment } from '@/lib/db'
+// import { createUser, createAssessment } from '@/lib/db'
 
 export interface AssessmentData {
   id?: string
@@ -60,21 +60,23 @@ export async function POST(request: NextRequest) {
       updatedAt: new Date().toISOString(),
     }
     
-    // Save user to database
-    const user = await createUser({
+    // Save user to database (commented for now)
+    const user = {
+      id: Date.now().toString(),
       email: data.email,
       phone: data.phone,
       first_name: data.name.split(' ')[0],
       last_name: data.name.split(' ')[1] || '',
-    })
+    }
     
     // Calculate ProMax Lipo suitability
     const bmi = data.weight / ((data.height / 100) ** 2)
     const qualification = bmi > 18.5 && bmi < 35 ? 'qualified' : 'review_needed'
     const matchScore = calculateMatchScore(data)
     
-    // Save assessment to database
-    const assessmentRecord = await createAssessment({
+    // Save assessment to database (commented for now)
+    const assessmentRecord = {
+      id: Date.now().toString(),
       user_id: user.id,
       weight_loss_method: data.medicalHistory.includes('ozempic') ? 'ozempic' : 'other',
       weight_lost_kg: 0, // This would come from assessment questions
@@ -82,7 +84,7 @@ export async function POST(request: NextRequest) {
       recommended_treatment: 'ProMax Lipo',
       match_score: matchScore,
       qualification_status: qualification,
-    })
+    }
     
     // Generate recommendations
     const recommendations = generateRecommendations(assessment)

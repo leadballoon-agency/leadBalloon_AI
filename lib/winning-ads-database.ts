@@ -11,7 +11,7 @@ export interface WinningAd {
   platform: 'facebook' | 'google' | 'youtube' | 'direct_mail' | 'email' | 'landing_page'
   runTime?: string // How long it ran (indicates success)
   headline: string
-  bodyC opy?: string
+  bodyCopy?: string
   cta: string
   offer?: string
   imageUrl?: string
