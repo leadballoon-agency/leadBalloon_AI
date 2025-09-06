@@ -1,0 +1,184 @@
+{
+  "competitors": {
+    "coolsculpting.com": {
+      "lastScraped": null,
+      "businessType": "Fat Freezing Clinic Chain",
+      "priceRange": "$2000-$4000 per area",
+      "strengths": [
+        "FDA approved",
+        "Non-invasive",
+        "No downtime",
+        "Well-known brand"
+      ],
+      "weaknesses": [
+        "Only freezes fat, doesn't tighten skin",
+        "Multiple sessions needed",
+        "Results take 3-6 months",
+        "Can cause paradoxical adipose hyperplasia"
+      ],
+      "targetAudience": "People with stubborn fat pockets",
+      "mainOffers": [
+        "Free consultation",
+        "Package deals for multiple areas",
+        "0% financing"
+      ]
+    },
+    "idealimage.com": {
+      "lastScraped": null,
+      "businessType": "Medical Spa Chain",
+      "priceRange": "$1500-$3000 per treatment",
+      "strengths": [
+        "Multiple treatment options",
+        "Nationwide locations",
+        "Medical professionals",
+        "Lifetime guarantee programs"
+      ],
+      "weaknesses": [
+        "High pressure sales",
+        "Hidden costs",
+        "Aggressive upselling",
+        "Mixed reviews"
+      ],
+      "targetAudience": "Middle-aged women seeking non-surgical options",
+      "mainOffers": [
+        "Buy 2 get 1 free",
+        "VIP membership programs",
+        "Free touch-ups"
+      ]
+    },
+    "sonobello.com": {
+      "lastScraped": null,
+      "businessType": "Liposuction Clinic Chain",
+      "priceRange": "$3000-$15000",
+      "strengths": [
+        "Permanent fat removal",
+        "Immediate results",
+        "Board-certified surgeons",
+        "Extensive before/after gallery"
+      ],
+      "weaknesses": [
+        "Surgical procedure with risks",
+        "Downtime required",
+        "Scarring possible",
+        "Very expensive"
+      ],
+      "targetAudience": "People ready for surgical intervention",
+      "mainOffers": [
+        "$250 off consultation",
+        "Financing available",
+        "Free second opinion"
+      ]
+    },
+    "skulpt.co.uk": {
+      "lastScraped": null,
+      "businessType": "Body Contouring Clinic UK",
+      "priceRange": "£500-£2000 per treatment",
+      "strengths": [
+        "UK-based",
+        "Multiple technologies",
+        "Experienced practitioners",
+        "Good local reputation"
+      ],
+      "weaknesses": [
+        "Limited locations",
+        "Newer brand",
+        "Less marketing presence",
+        "Website needs improvement"
+      ],
+      "targetAudience": "UK residents seeking body contouring",
+      "mainOffers": [
+        "Free consultation",
+        "Package deals",
+        "Refer a friend discount"
+      ]
+    },
+    "bodycontouringclinic.co.uk": {
+      "lastScraped": null,
+      "businessType": "Specialist Body Clinic UK",
+      "priceRange": "£400-£1800 per area",
+      "strengths": [
+        "Specialization",
+        "Central London location",
+        "Celebrity endorsements",
+        "Latest equipment"
+      ],
+      "weaknesses": [
+        "Very expensive",
+        "London-only",
+        "Long waiting lists",
+        "Pretentious branding"
+      ],
+      "targetAudience": "Affluent Londoners",
+      "mainOffers": [
+        "Exclusive membership",
+        "Concierge service",
+        "Results guarantee"
+      ]
+    }
+  },
+  "industryInsights": {
+    "commonPainPoints": [
+      "Stubborn fat that won't go with diet/exercise",
+      "Loose skin after weight loss (especially Ozempic)",
+      "Post-pregnancy body changes",
+      "Aging-related body changes",
+      "Low self-confidence",
+      "Avoiding intimacy",
+      "Can't wear desired clothes"
+    ],
+    "priceAnchoring": {
+      "surgery": "$8000-$20000",
+      "coolsculpting": "$2000-$6000",
+      "radiofrequency": "$1000-$3000",
+      "ultrasound": "$800-$2500",
+      "athome": "$100-$500"
+    },
+    "bestOffers": [
+      "Free consultation + body scan",
+      "Package deals (buy 3 get 1 free)",
+      "Bring a friend discount",
+      "Results guarantee or money back",
+      "Limited time introductory pricing",
+      "VIP maintenance programs"
+    ],
+    "urgencyTriggers": [
+      "Summer body deadline",
+      "Wedding/event preparation",
+      "Limited appointment availability",
+      "Introductory pricing ending",
+      "Machine fully booked",
+      "Only X spots left this month"
+    ],
+    "trustBuilders": [
+      "Before/after photos",
+      "Video testimonials",
+      "Medical credentials",
+      "Years in business",
+      "Number of treatments performed",
+      "Celebrity clients",
+      "Media mentions",
+      "Professional associations"
+    ]
+  },
+  "ukMarketSpecifics": {
+    "regulations": "CQC registration required for certain procedures",
+    "averagePrices": {
+      "cryolipolysis": "£600-£1200",
+      "radiofrequency": "£200-£500",
+      "ultrasound_cavitation": "£150-£400",
+      "laser_lipo": "£500-£1500"
+    },
+    "popularClinics": [
+      "Skulpt",
+      "The Body Clinic",
+      "Harley Street Skin",
+      "PHI Clinic",
+      "EF MEDISPA"
+    ],
+    "seasonality": {
+      "peak": "March-June (summer prep)",
+      "slow": "November-January (except New Year)",
+      "opportunities": "January (New Year resolutions), September (back to routine)"
+    }
+  }
+}

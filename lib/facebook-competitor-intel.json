@@ -1,0 +1,73 @@
+{
+  "competitors": {
+    "coolsculpting": {
+      "facebookPageId": "126513057397454",
+      "facebookPageName": "CoolSculpting",
+      "website": "coolsculpting.com",
+      "industry": "body contouring"
+    },
+    "sonobello": {
+      "facebookPageId": "108793825821735",
+      "facebookPageName": "Sono Bello",
+      "website": "sonobello.com",
+      "industry": "body contouring"
+    },
+    "idealimage": {
+      "facebookPageId": "113847275308102",
+      "facebookPageName": "Ideal Image",
+      "website": "idealimage.com",
+      "industry": "medical spa"
+    },
+    "laseraway": {
+      "facebookPageId": "158933994134455",
+      "facebookPageName": "LaserAway",
+      "website": "laseraway.com",
+      "industry": "laser aesthetics"
+    },
+    "sculptedclinic": {
+      "facebookPageName": "Sculpted Clinic UK",
+      "website": "sculptedclinic.co.uk",
+      "industry": "body contouring",
+      "location": "UK"
+    },
+    "phiclinic": {
+      "facebookPageName": "PHI Clinic",
+      "website": "phiclinic.com",
+      "industry": "aesthetics",
+      "location": "UK"
+    },
+    "harleymedical": {
+      "facebookPageName": "The Harley Medical Group",
+      "website": "harleymedical.co.uk",
+      "industry": "cosmetic surgery",
+      "location": "UK"
+    }
+  },
+  "industrySearchTerms": {
+    "body_contouring": [
+      "fat freezing",
+      "body sculpting", 
+      "non surgical fat removal",
+      "coolsculpting",
+      "cryolipolysis"
+    ],
+    "aesthetics": [
+      "botox",
+      "dermal fillers",
+      "non surgical facelift",
+      "hifu treatment",
+      "skin tightening"
+    ],
+    "medical_spa": [
+      "laser hair removal",
+      "medical spa",
+      "medspa",
+      "aesthetic treatments"
+    ]
+  },
+  "facebookAdsLibraryUrls": {
+    "byPageId": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&view_all_page_id=",
+    "bySearch": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=",
+    "ukOnly": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=GB&q="
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "marketing_legends": {
+    "alex_hormozi": {
+      "core_principles": {
+        "value_equation": {
+          "formula": "Value = (Dream Outcome × Perceived Likelihood) / (Time Delay × Effort & Sacrifice)",
+          "components": {
+            "dream_outcome": "The result they want most",
+            "perceived_likelihood": "How likely they think success is",
+            "time_delay": "How long before they see results",
+            "effort_sacrifice": "How hard it is to achieve"
+          }
+        },
+        "grand_slam_offer": {
+          "elements": [
+            "Sell the dream outcome, not the vehicle",
+            "Stack value to make price irrelevant",
+            "Add urgency and scarcity ethically",
+            "Guarantee to reverse risk",
+            "Add bonuses that cost you little but have high perceived value"
+          ]
+        },
+        "pricing_strategy": {
+          "principle": "Charge as much as you can while still being able to sleep at night",
+          "tactics": [
+            "Price based on value, not cost",
+            "Test prices upward until sales velocity drops",
+            "Use contrast pricing (show higher price first)"
+          ]
+        }
+      },
+      "offer_templates": {
+        "weight_loss": {
+          "dream_outcome": "Look amazing in any outfit",
+          "value_stack": [
+            "Personalized nutrition plan ($997 value)",
+            "Weekly accountability coaching ($1,997 value)",
+            "Private community access ($497 value)",
+            "Supplement protocol ($297/month value)",
+            "Progress tracking app ($97/month value)"
+          ],
+          "guarantee": "Lose X pounds in Y days or get 2X your money back",
+          "scarcity": "Only taking X clients this month"
+        }
+      }
+    },
+    "john_carlton": {
+      "core_principles": {
+        "salesmanship": {
+          "philosophy": "A sales letter is a salesman in print",
+          "approach": "Enter the conversation already happening in their head"
+        },
+        "copywriting_rules": {
+          "headlines": [
+            "Call out your audience",
+            "Make a big promise",
+            "Back it up with proof",
+            "Add urgency"
+          ],
+          "body_copy": [
+            "Tell stories, not features",
+            "Use 'bucket brigade' copy to keep them reading",
+            "Address every objection",
+            "Close multiple times"
+          ]
+        },
+        "psychological_triggers": {
+          "fear": "What they'll lose without your solution",
+          "greed": "What they'll gain with your solution",
+          "curiosity": "Secrets, tricks, and hidden information",
+          "urgency": "Why they must act now"
+        }
+      }
+    },
+    "russell_brunson": {
+      "core_principles": {
+        "value_ladder": {
+          "stages": [
+            "Free (Lead Magnet)",
+            "Low Ticket ($7-47)",
+            "Core Offer ($97-997)",
+            "High Ticket ($2,997+)"
+          ]
+        },
+        "perfect_webinar": {
+          "structure": [
+            "The Big Domino (One belief to break)",
+            "3 Secrets (Vehicle, Internal, External beliefs)",
+            "Stack and Close"
+          ]
+        },
+        "hook_story_offer": {
+          "hook": "Grab attention",
+          "story": "Build connection and desire",
+          "offer": "Present irresistible solution"
+        }
+      }
+    },
+    "dan_kennedy": {
+      "core_principles": {
+        "magnetic_marketing": {
+          "triangle": [
+            "Message",
+            "Market", 
+            "Media"
+          ]
+        },
+        "ltv_focus": "Whoever can spend the most to acquire a customer wins",
+        "info_marketing": {
+          "principle": "Sell information at 100x the cost of delivery",
+          "format": "Courses, seminars, mastermind groups"
+        }
+      }
+    },
+    "gary_halbert": {
+      "core_principles": {
+        "starving_crowd": "The most important thing is a hungry market",
+        "aida": {
+          "attention": "Shocking headline or opening",
+          "interest": "Tell them something they didn't know",
+          "desire": "Paint the picture of their new life",
+          "action": "Clear, simple call to action"
+        },
+        "coat_of_arms": "People will pay premium for things that reflect their identity"
+      }
+    }
+  },
+  "offer_formulas": {
+    "hormozi_grand_slam": {
+      "steps": [
+        "Identify dream outcome",
+        "List all problems preventing outcome",
+        "Turn problems into solutions",
+        "Determine delivery method for each solution",
+        "Name each solution component",
+        "Add value to each component",
+        "Stack all components",
+        "Add guarantee",
+        "Add urgency/scarcity",
+        "Create contrast pricing"
+      ]
+    },
+    "brunson_stack": {
+      "components": [
+        "Core offer",
+        "Bonus 1: Quick win",
+        "Bonus 2: Remove biggest fear",
+        "Bonus 3: Speed up results",
+        "Bonus 4: Community/support",
+        "Bonus 5: Future protection"
+      ]
+    }
+  },
+  "assessment_questions": {
+    "qualification": {
+      "budget": {
+        "hormozi_style": "If you found the perfect solution to [problem], what would it be worth to you?",
+        "options": [
+          "Less than $500",
+          "$500-$2,000",
+          "$2,000-$5,000",
+          "$5,000-$10,000",
+          "Whatever it takes"
+        ]
+      },
+      "urgency": {
+        "question": "How quickly do you need to see results?",
+        "options": [
+          "ASAP - I'm in pain",
+          "Within 30 days",
+          "Within 90 days",
+          "Within 6 months",
+          "Just exploring options"
+        ]
+      },
+      "commitment": {
+        "question": "How many hours per week can you dedicate to [solution]?",
+        "options": [
+          "Less than 1 hour",
+          "1-3 hours",
+          "3-5 hours",
+          "5-10 hours",
+          "Whatever it takes"
+        ]
+      }
+    },
+    "segmentation": {
+      "problem_awareness": [
+        "Unaware of problem",
+        "Problem aware",
+        "Solution aware",
+        "Product aware",
+        "Most aware"
+      ],
+      "sophistication": [
+        "Never tried anything",
+        "Tried 1-2 solutions",
+        "Tried 3-5 solutions",
+        "Tried everything"
+      ]
+    }
+  },
+  "competitor_analysis": {
+    "fb_ads_library": {
+      "api_endpoint": "https://www.facebook.com/ads/library/api",
+      "key_metrics": [
+        "Ad run duration (longer = more profitable)",
+        "Number of variations (more = testing/scaling)",
+        "Engagement metrics",
+        "Creative styles that work"
+      ],
+      "analysis_framework": {
+        "hooks": "What grabs attention in first 3 seconds",
+        "offers": "What they're promising",
+        "proof": "Testimonials, case studies, credentials",
+        "cta": "How they ask for action"
+      }
+    },
+    "website_analysis": {
+      "elements_to_extract": [
+        "Value propositions",
+        "Pricing models",
+        "Guarantee types",
+        "Social proof",
+        "Urgency/scarcity tactics",
+        "Lead magnets",
+        "Upsell/downsell flow"
+      ]
+    }
+  },
+  "industry_templates": {
+    "weight_loss": {
+      "hooks": [
+        "Lose X pounds in Y days",
+        "Eat your favorite foods and still lose weight",
+        "No gym required",
+        "Doctor discovers..."
+      ],
+      "objections": [
+        "I've tried everything",
+        "I don't have time",
+        "It's too expensive",
+        "My genetics are against me"
+      ]
+    },
+    "business_coaching": {
+      "hooks": [
+        "Scale to $X/month",
+        "Work less, earn more",
+        "The system I used to...",
+        "Replace your income in 90 days"
+      ],
+      "objections": [
+        "I'm not tech savvy",
+        "Market is saturated",
+        "I don't have money to invest",
+        "I don't have an audience"
+      ]
+    },
+    "relationships": {
+      "hooks": [
+        "Get your ex back",
+        "Find your soulmate",
+        "Save your marriage",
+        "Become irresistible"
+      ],
+      "objections": [
+        "My situation is different",
+        "I've tried therapy",
+        "They won't change",
+        "It's too late"
+      ]
+    }
+  },
+  "psychological_frameworks": {
+    "cialdini_persuasion": [
+      "Reciprocity",
+      "Commitment/Consistency", 
+      "Social Proof",
+      "Authority",
+      "Liking",
+      "Scarcity"
+    ],
+    "maslow_hierarchy": {
+      "levels": [
+        "Physiological",
+        "Safety",
+        "Love/Belonging",
+        "Esteem",
+        "Self-actualization"
+      ],
+      "application": "Target the appropriate level for your market"
+    }
+  }
+}

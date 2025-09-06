@@ -1,0 +1,419 @@
+{
+  "legends": {
+    "claude_hopkins": {
+      "name": "Claude Hopkins",
+      "era": "1866-1932",
+      "title": "The Father of Modern Advertising",
+      "keyPrinciples": [
+        "Scientific Advertising - Test everything, guess nothing",
+        "Reason-why advertising - Give specific reasons to buy",
+        "Preemptive claims - Be first to claim the obvious",
+        "Free samples and trials - Remove risk to increase response",
+        "Tracking and testing - Measure every ad's performance",
+        "Headlines are 80% of the ad - Make them count",
+        "Be specific, not general - '307% improvement' beats 'significant improvement'"
+      ],
+      "famousCampaigns": [
+        "Pepsodent - 'The film on your teeth'",
+        "Schlitz Beer - 'Washed with live steam'",
+        "Palmolive Soap - Free samples campaign"
+      ],
+      "quotes": [
+        "The competent advertising man must understand psychology.",
+        "Almost any question can be answered cheaply, quickly and finally, by a test campaign.",
+        "The purpose of a headline is to pick out people you can interest.",
+        "People don't buy from clowns."
+      ],
+      "frameworks": {
+        "reasonWhy": {
+          "description": "Give specific, believable reasons for every claim",
+          "example": "Not 'Best soap' but 'Made with palm and olive oils for softer skin'"
+        },
+        "preemption": {
+          "description": "Claim the obvious first, own it forever",
+          "example": "Schlitz claimed their bottles were 'washed with live steam' - everyone did it, but Schlitz owned it"
+        }
+      }
+    },
+    "john_carlton": {
+      "name": "John Carlton",
+      "era": "1950-present",
+      "title": "The Most Ripped-Off Copywriter Alive",
+      "keyPrinciples": [
+        "Write like you talk - Conversational copy converts",
+        "Enter the conversation in their head",
+        "The One-Legged Golfer approach - Unique hooks grab attention",
+        "Benefits, not features - What's in it for them?",
+        "Storytelling sells - People buy stories, not products",
+        "Gun-to-the-head writing - Write like your life depends on it",
+        "The reluctant hero - Position yourself as forced to share secrets"
+      ],
+      "famousCampaigns": [
+        "One-Legged Golfer - Golf instruction",
+        "Sex after 60 - Men's health",
+        "Speed reading course - Education"
+      ],
+      "quotes": [
+        "Good advertising is a sales pitch. Great advertising is a seduction.",
+        "The money is in the list.",
+        "Nobody cares about you or your product until you give them a reason to.",
+        "Write to the chimpanzee brain - the part that decides."
+      ],
+      "frameworks": {
+        "salesDetective": {
+          "description": "Research deeply, become a detective about your market",
+          "steps": ["Interview customers", "Find their exact words", "Discover hidden desires", "Uncover objections"]
+        },
+        "operationMoneySuck": {
+          "description": "Extract maximum value from every promotion",
+          "elements": ["Multiple upsells", "Downsells", "Cross-sells", "Backend offers"]
+        }
+      }
+    },
+    "gary_halbert": {
+      "name": "Gary Halbert",
+      "era": "1938-2007",
+      "title": "The Prince of Print",
+      "keyPrinciples": [
+        "The starving crowd - Market is everything",
+        "AIDA formula - Attention, Interest, Desire, Action",
+        "The Halbert Index - Mail to buyers, not suspects",
+        "Speed of implementation beats perfection",
+        "Motion beats meditation - Just start writing",
+        "Grabbers - Physical items in mail increase open rates",
+        "The power of the PS - Most-read part after headline"
+      ],
+      "famousCampaigns": [
+        "Coat of Arms letter - 600 million mailed",
+        "The Desperate Nerd letter",
+        "How to Collect Social Security at Any Age"
+      ],
+      "quotes": [
+        "The #1 advantage is a starving crowd.",
+        "You can't multiply zeros.",
+        "Strong copy will not overcome a weak offer.",
+        "The money is in the backend."
+      ],
+      "frameworks": {
+        "starvingCrowd": {
+          "description": "Find desperate buyers, not curious browsers",
+          "example": "Sell water in the desert, not ice to Eskimos"
+        },
+        "grabber": {
+          "description": "Add physical element to get attention",
+          "examples": ["Dollar bill", "Aspirin", "Penny", "String"]
+        }
+      }
+    },
+    "eugene_schwartz": {
+      "name": "Eugene Schwartz",
+      "era": "1927-1995",
+      "title": "The Mozart of Direct Mail",
+      "keyPrinciples": [
+        "5 stages of market sophistication",
+        "Breakthrough Advertising - Channel existing desires",
+        "You can't create desire, only channel it",
+        "Intensification and identification",
+        "The power of fascinations",
+        "33-minute writing sessions",
+        "Headlines come from the market, not creativity"
+      ],
+      "famousCampaigns": [
+        "Burn Disease Out of Your Body",
+        "Give Me 15 Minutes and I'll Give You a Super-Memory",
+        "How to Win Friends and Influence People"
+      ],
+      "quotes": [
+        "Copy is not written. Copy is assembled.",
+        "There are no products. Only problems and solutions.",
+        "The greatest mistake marketers make is trying to create demand.",
+        "Talk about what your prospect wants, not what you're selling."
+      ],
+      "frameworks": {
+        "marketSophistication": {
+          "stages": {
+            "1": "First in market - Just announce the benefit",
+            "2": "Second - Enlarge the claim",
+            "3": "Third - Introduce unique mechanism",
+            "4": "Fourth - Elaborate on mechanism",
+            "5": "Fifth - Shift to identification with prospect"
+          }
+        },
+        "intensification": {
+          "description": "Build desire through escalating promises",
+          "technique": "Stack benefits until resistance breaks"
+        }
+      }
+    },
+    "david_ogilvy": {
+      "name": "David Ogilvy",
+      "era": "1911-1999",
+      "title": "The Father of Advertising",
+      "keyPrinciples": [
+        "The consumer is not a moron, she's your wife",
+        "Long copy sells more than short copy",
+        "Headlines with news value work best",
+        "Specifics outperform generalities",
+        "Research before creativity",
+        "Brand image is paramount",
+        "Test everything, assume nothing"
+      ],
+      "famousCampaigns": [
+        "The Man in the Hathaway Shirt",
+        "At 60 miles an hour... Rolls-Royce",
+        "Schweppes - Schweppervescence"
+      ],
+      "quotes": [
+        "On average, five times as many people read the headline as read the body copy.",
+        "Never write an advertisement which you wouldn't want your family to read.",
+        "The best ideas come as jokes. Make your thinking as funny as possible.",
+        "Don't bunt. Aim out of the ballpark."
+      ],
+      "frameworks": {
+        "researchFirst": {
+          "description": "Deep research before any creative work",
+          "process": ["Study product", "Study competition", "Study consumer", "Then create"]
+        },
+        "ogilvyHeadlines": {
+          "types": ["News", "How to", "Question", "Command", "Testimonial"],
+          "rules": ["Use specifics", "Include benefit", "Target audience", "Create curiosity"]
+        }
+      }
+    },
+    "joe_sugarman": {
+      "name": "Joe Sugarman",
+      "era": "1938-2022",
+      "title": "The Mail Order Maverick",
+      "keyPrinciples": [
+        "The purpose of the headline is to get them to read the first line",
+        "The purpose of the first line is to get them to read the second",
+        "Slippery slide - Make copy so compelling they can't stop",
+        "Seeds of curiosity - Plant questions that demand answers",
+        "Psychological triggers - 30 triggers that cause action",
+        "Selling environment - Create the right buying atmosphere",
+        "Every element has one purpose - to get the first sentence read"
+      ],
+      "famousCampaigns": [
+        "BluBlocker Sunglasses",
+        "JS&A Electronics catalog",
+        "Pocket CB radio"
+      ],
+      "quotes": [
+        "Every communication should be a personal one.",
+        "Selling is a transfer of enthusiasm.",
+        "The more you tell, the more you sell.",
+        "Copy is a mental environment."
+      ],
+      "psychologicalTriggers": [
+        "Consistency",
+        "Reciprocity",
+        "Social proof",
+        "Authority",
+        "Scarcity",
+        "Curiosity",
+        "Instant gratification",
+        "Storytelling",
+        "Simplicity",
+        "Exclusivity"
+      ]
+    },
+    "rosser_reeves": {
+      "name": "Rosser Reeves",
+      "era": "1910-1984",
+      "title": "The USP Master",
+      "keyPrinciples": [
+        "USP - Unique Selling Proposition",
+        "Each ad must make a proposition",
+        "The proposition must be unique",
+        "The proposition must sell",
+        "Repetition builds retention",
+        "Reality in advertising"
+      ],
+      "famousCampaigns": [
+        "M&Ms - 'Melts in your mouth, not in your hands'",
+        "Colgate - 'Cleans your breath while it cleans your teeth'",
+        "Anacin - 'Fast, fast, fast relief'"
+      ],
+      "frameworks": {
+        "USP": {
+          "criteria": [
+            "Must make a specific benefit promise",
+            "Must be unique to your brand",
+            "Must be strong enough to move millions"
+          ]
+        }
+      }
+    },
+    "dan_kennedy": {
+      "name": "Dan Kennedy",
+      "era": "1954-present",
+      "title": "The Millionaire Maker",
+      "keyPrinciples": [
+        "Message-Market-Media match",
+        "The wealth pyramid - Multiple price points",
+        "Deadline and urgency in everything",
+        "Lead generation before selling",
+        "Ascension model - Start small, sell up",
+        "Personality-driven marketing",
+        "Kitchen sink approach - Throw everything at them"
+      ],
+      "famousCampaigns": [
+        "Magnetic Marketing System",
+        "GKIC membership program",
+        "Information marketing empire"
+      ],
+      "quotes": [
+        "Whoever can spend the most to acquire a customer wins.",
+        "One is the worst number in business.",
+        "There is no relationship between being good and getting paid.",
+        "Why advertise if you're not going to be outrageous?"
+      ],
+      "frameworks": {
+        "3Ms": {
+          "description": "Message-Market-Media Match",
+          "rule": "Right message to right market via right media"
+        },
+        "wealthPyramid": {
+          "levels": ["Free", "Low-ticket", "Mid-ticket", "High-ticket", "Continuity", "Backend"]
+        }
+      }
+    },
+    "robert_collier": {
+      "name": "Robert Collier",
+      "era": "1885-1950",
+      "title": "The Letter Master",
+      "keyPrinciples": [
+        "Enter the conversation already in their mind",
+        "The 6 basic human motives",
+        "Start with the prospect, not the product",
+        "The power of visualization",
+        "Pictures in the mind sell",
+        "Every letter should be personal"
+      ],
+      "quotes": [
+        "Always enter the conversation already taking place in the customer's mind.",
+        "The mind thinks in pictures.",
+        "Study your reader first - your product second."
+      ],
+      "sixMotives": [
+        "Love",
+        "Gain (Money)",
+        "Duty",
+        "Pride",
+        "Self-indulgence",
+        "Self-preservation"
+      ]
+    },
+    "jay_abraham": {
+      "name": "Jay Abraham",
+      "era": "1949-present",
+      "title": "The 9 Billion Dollar Man",
+      "keyPrinciples": [
+        "Three ways to grow a business",
+        "Lifetime value over transaction value",
+        "Risk reversal - Take the risk away",
+        "Host-beneficiary relationships",
+        "Preeminence - Fall in love with your clients",
+        "Leverage - OPM, OPT, OPE, OPR",
+        "Testing is profit maximization"
+      ],
+      "frameworks": {
+        "threeWays": {
+          "methods": [
+            "Increase number of customers",
+            "Increase average transaction value",
+            "Increase frequency of purchases"
+          ]
+        },
+        "parthenon": {
+          "description": "Multiple pillars of income",
+          "principle": "Never depend on one source"
+        }
+      }
+    }
+  },
+  "timelessPrinciples": {
+    "headline": {
+      "purpose": "Stop the right people and promise a benefit",
+      "rules": [
+        "80% of success is the headline",
+        "Use specifics over generalities",
+        "Include news or curiosity",
+        "Call out your audience",
+        "Promise a benefit"
+      ]
+    },
+    "copyStructure": {
+      "AIDA": ["Attention", "Interest", "Desire", "Action"],
+      "PAS": ["Problem", "Agitate", "Solution"],
+      "BAB": ["Before", "After", "Bridge"],
+      "4Ps": ["Promise", "Picture", "Proof", "Push"],
+      "QUEST": ["Qualify", "Understand", "Educate", "Stimulate", "Transition"]
+    },
+    "psychologicalTriggers": {
+      "cialdini": [
+        "Reciprocity",
+        "Commitment/Consistency",
+        "Social Proof",
+        "Authority",
+        "Liking",
+        "Scarcity"
+      ],
+      "additional": [
+        "Fear of missing out",
+        "Instant gratification",
+        "Storytelling",
+        "Curiosity gaps",
+        "Pattern interrupts"
+      ]
+    },
+    "offers": {
+      "irresistible": [
+        "Risk reversal/guarantee",
+        "Scarcity/urgency",
+        "Value stacking",
+        "Payment plans",
+        "Bonuses",
+        "Social proof"
+      ]
+    }
+  },
+  "swipeFileCategories": {
+    "headlines": {
+      "howTo": [
+        "How to [Achieve Desired Result] Without [Common Obstacle]",
+        "How to [Achieve Result] in [Specific Timeframe]",
+        "How [Specific Number] [Target Audience] [Achieved Result]"
+      ],
+      "mistakes": [
+        "The [Number] Biggest Mistakes [Target Audience] Make",
+        "Warning: Don't [Action] Until You Read This",
+        "Why [Common Belief] Is Dead Wrong"
+      ],
+      "secrets": [
+        "The Secret of [Achieving Result]",
+        "[Industry] Insider Reveals [Shocking Truth]",
+        "What [Authority] Doesn't Want You to Know"
+      ],
+      "social_proof": [
+        "[Number] [Target Audience] Can't Be Wrong",
+        "Join [Number] Who Have Already [Result]",
+        "Why [Authority] Recommends [Product]"
+      ]
+    },
+    "openings": {
+      "story": "It was 2am when I discovered the secret that would...",
+      "question": "What if I told you that everything you know about [topic] is wrong?",
+      "shocking": "I'm about to share something that made my lawyer beg me not to publish...",
+      "personal": "Dear Friend, If you're like me...",
+      "news": "A new discovery in [location] reveals..."
+    },
+    "closes": {
+      "scarcity": "Only [number] spots available",
+      "urgency": "This offer expires at midnight",
+      "guarantee": "You risk nothing with our iron-clad guarantee",
+      "bonus": "Order now and receive [bonus] free",
+      "reason_why": "I can only make this offer because..."
+    }
+  }
+}
