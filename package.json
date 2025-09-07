@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "playwright install chromium && next build",
+    "postinstall": "playwright install-deps",
     "start": "next start",
     "lint": "next lint",
     "test": "playwright test",

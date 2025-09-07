@@ -1,0 +1,169 @@
+{
+  "scraping": [
+    {
+      "url": "https://skulptbodycontouring.co.uk",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.3d-lipo.co.uk",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.coolsculpting.co.uk",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.harleymedical.co.uk",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.transform.co.uk",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.sknclinics.co.uk",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.bupa.co.uk/dental",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.mydentist.co.uk",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.puregym.com",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.thegymgroup.com",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.bbc.co.uk",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.amazon.co.uk",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    },
+    {
+      "url": "https://www.gov.uk",
+      "success": false,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "qualityScore": 0
+    }
+  ],
+  "conversation": [
+    {
+      "url": "https://skulptbodycontouring.co.uk",
+      "hasFollowUpQuestion": false,
+      "mentionsIndustry": false,
+      "providesValue": false
+    },
+    {
+      "url": "https://www.harleymedical.co.uk",
+      "hasFollowUpQuestion": false,
+      "mentionsIndustry": false,
+      "providesValue": false
+    },
+    {
+      "url": "https://www.puregym.com",
+      "hasFollowUpQuestion": false,
+      "mentionsIndustry": false,
+      "providesValue": false
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://skulptbodycontouring.co.uk",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.3d-lipo.co.uk",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.coolsculpting.co.uk",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.harleymedical.co.uk",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.transform.co.uk",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.sknclinics.co.uk",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.bupa.co.uk/dental",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.mydentist.co.uk",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.puregym.com",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.thegymgroup.com",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.bbc.co.uk",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.amazon.co.uk",
+      "issue": "Poor scraping quality",
+      "score": 0
+    },
+    {
+      "url": "https://www.gov.uk",
+      "issue": "Poor scraping quality",
+      "score": 0
+    }
+  ]
+}

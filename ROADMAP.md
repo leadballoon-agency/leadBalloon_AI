@@ -29,7 +29,7 @@
 
 ---
 
-## Phase 2: Outreach Mode (Week 3-4)
+## Phase 2: Outreach Mode - THE MONEY PRINTER (Week 3-4)
 ### Silent Analysis Mode
 - [ ] Bypass queue/chat for internal use
 - [ ] Bulk URL analysis capability
@@ -76,6 +76,30 @@
 - [ ] SEO analysis integration
 
 ---
+
+## GAME CHANGING FEATURES 🎯
+
+### The "HOLY SHIT" Features
+- [ ] **Competitor Weakness Finder** - "Their contact form is broken, strike NOW"
+- [ ] **Money Left on Table Calculator** - "You're losing £47k/year, here's how"
+- [ ] **Ad Spy Mode** - Show their ACTUAL Facebook ads running right now
+- [ ] **Review Bomber Alert** - "Competitor got 3 bad reviews today, opportunity!"
+- [ ] **Trend Predictor** - "This service will explode in 3 months, start now"
+- [ ] **Partnership Matcher** - "These 3 businesses would send you leads"
+- [ ] **Acquisition Scanner** - "This competitor might sell, they're struggling"
+
+### AI Sales Army
+- [ ] **Auto Follow-Up Claude** - Continues conversation via email
+- [ ] **Hot Lead Detector** - Alerts you when someone is ready to buy
+- [ ] **Objection Predictor** - Knows what they'll say before they say it
+- [ ] **Price Anchoring Bot** - Mentions competitors' higher prices naturally
+- [ ] **FOMO Generator** - "3 other [industry] businesses joined this week"
+
+### Knowledge Domination
+- [ ] **Live Scraping During Chat** - Real-time competitive intel
+- [ ] **Industry Gossip Mode** - "Did you hear about [competitor's issue]?"
+- [ ] **Success Pattern Detector** - "All winning clinics do THIS"
+- [ ] **Failure Predictor** - "Stop doing X or you'll fail like [example]"
 
 ## Future Ideas (Backlog)
 ### Conversation Enhancements

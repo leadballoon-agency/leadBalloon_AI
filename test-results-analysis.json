@@ -1,0 +1,104 @@
+{
+  "results": [
+    {
+      "category": "Business Owner - Pain Points",
+      "context": {
+        "url": "https://bodysculpting.co.uk",
+        "businessType": "bodyContouring",
+        "userName": "John Smith",
+        "userEmail": "john@bodysculpting.co.uk"
+      },
+      "conversations": []
+    },
+    {
+      "category": "Business Owner - Strategy Questions",
+      "context": {
+        "url": "https://solarpanels.co.uk",
+        "businessType": "solarPV",
+        "userName": "Sarah Jones",
+        "userEmail": "sarah@solarpanels.co.uk"
+      },
+      "conversations": []
+    },
+    {
+      "category": "Competitor - Researching",
+      "context": {
+        "url": "https://laserhair.co.uk",
+        "businessType": "laserHairRemoval",
+        "userName": "Mike Wilson",
+        "userEmail": "mike@competitorclinic.com"
+      },
+      "conversations": []
+    },
+    {
+      "category": "Paid Ads Knowledge",
+      "context": {
+        "url": "https://testbusiness.co.uk",
+        "businessType": "general"
+      },
+      "conversations": []
+    },
+    {
+      "category": "Email Marketing Knowledge",
+      "context": {
+        "url": "https://ecommerce.co.uk",
+        "businessType": "ecommerce"
+      },
+      "conversations": []
+    },
+    {
+      "category": "SEO Knowledge",
+      "context": {
+        "url": "https://localservice.co.uk",
+        "businessType": "general"
+      },
+      "conversations": []
+    },
+    {
+      "category": "Conversion Optimization",
+      "context": {
+        "url": "https://clinic.co.uk",
+        "businessType": "general"
+      },
+      "conversations": []
+    },
+    {
+      "category": "HIFU Specialist",
+      "context": {
+        "url": "https://hifuclinic.co.uk",
+        "businessType": "hifu"
+      },
+      "conversations": []
+    },
+    {
+      "category": "Driving Instructor",
+      "context": {
+        "url": "https://drivingschool.co.uk",
+        "businessType": "drivingInstructor"
+      },
+      "conversations": []
+    }
+  ],
+  "metrics": {
+    "totalTests": 0,
+    "successful": 0,
+    "failed": 33,
+    "knowledgeUsage": {},
+    "responseQuality": [],
+    "averageResponseLength": null,
+    "conversationFlow": [],
+    "userTypeDetection": [],
+    "industryDetection": []
+  },
+  "categoryScores": {
+    "Business Owner - Pain Points": null,
+    "Business Owner - Strategy Questions": null,
+    "Competitor - Researching": null,
+    "Paid Ads Knowledge": null,
+    "Email Marketing Knowledge": null,
+    "SEO Knowledge": null,
+    "Conversion Optimization": null,
+    "HIFU Specialist": null,
+    "Driving Instructor": null
+  }
+}

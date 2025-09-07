@@ -6,9 +6,11 @@ import { chromium } from 'playwright'
  */
 export async function POST(req: NextRequest) {
   let browser = null
+  let requestBody: any
   
   try {
-    const { url, options = {} } = await req.json()
+    requestBody = await req.json()
+    const { url, options = {} } = requestBody
     
     console.log(`🌐 Scraping ${url} with Playwright...`)
     
@@ -97,17 +99,68 @@ export async function POST(req: NextRequest) {
     })
     
   } catch (error) {
-    console.error('Scraping error:', error)
+    console.error('Playwright scraping error:', error)
     
     if (browser) {
       await browser.close()
     }
     
-    return NextResponse.json({
-      success: false,
-      error: error instanceof Error ? error.message : 'Failed to scrape website',
-      fallback: true
-    })
+    // Fallback to simple fetch when Playwright fails
+    try {
+      const { url } = requestBody
+      console.log(`🔄 Falling back to simple fetch for ${url}`)
+      
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        },
+        signal: AbortSignal.timeout(10000)
+      })
+      
+      const html = await response.text()
+      
+      // Simple HTML parsing
+      const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i)
+      const title = titleMatch ? titleMatch[1] : 'Unknown'
+      
+      const descMatch = html.match(/<meta[^>]*name="description"[^>]*content="([^"]+)"/i)
+      const metaDesc = descMatch ? descMatch[1] : ''
+      
+      const h1Match = html.match(/<h1[^>]*>([^<]+)<\/h1>/i)
+      const headline = h1Match ? h1Match[1] : title
+      
+      // Extract prices
+      const priceMatches = html.match(/[\$£€]\d+/g) || []
+      const prices = Array.from(new Set(priceMatches)).slice(0, 5)
+      
+      return NextResponse.json({
+        success: true,
+        data: {
+          headline,
+          metaDesc,
+          bodyText: html.substring(0, 1000), // Limited text for analysis
+          prices,
+          ctas: [],
+          testimonials: [],
+          images: [],
+          title
+        },
+        screenshot: null,
+        url,
+        timestamp: new Date().toISOString(),
+        method: 'fallback-fetch'
+      })
+      
+    } catch (fallbackError) {
+      console.error('Fallback scraping also failed:', fallbackError)
+      
+      return NextResponse.json({
+        success: false,
+        error: 'Both Playwright and fallback scraping failed',
+        originalError: error instanceof Error ? error.message : 'Unknown error',
+        fallbackError: fallbackError instanceof Error ? fallbackError.message : 'Unknown error'
+      })
+    }
   }
 }
 
