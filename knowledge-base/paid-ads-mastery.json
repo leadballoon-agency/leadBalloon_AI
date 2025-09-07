@@ -1,0 +1,206 @@
+{
+  "facebookAds": {
+    "costBenchmarks": {
+      "avgCPM": "£8-15 UK market",
+      "avgCPC": "£0.50-2.00 depending on industry",
+      "avgCPL": {
+        "bodyContouring": "£15-50",
+        "solarPV": "£20-60",
+        "dental": "£25-70",
+        "ecommerce": "£5-20",
+        "b2b": "£30-100"
+      }
+    },
+    
+    "winningStrategies": {
+      "campaignStructure": {
+        "CBO": "Use Campaign Budget Optimization for 3+ ad sets",
+        "budget": "Start with £20-30/day minimum for learning phase",
+        "scaling": "Increase budget 20% every 3 days when profitable"
+      },
+      
+      "audiences": {
+        "lookalike": "1% LAL of purchasers beats broad targeting 90% of time",
+        "retargeting": "Website visitors 180 days, cart abandoners 30 days",
+        "exclusions": "ALWAYS exclude recent purchasers from prospecting",
+        "goldmine": "Lookalike of high LTV customers, not all customers"
+      },
+      
+      "creatives": {
+        "ugc": "User-generated content gets 2.4x higher CTR",
+        "carousel": "Carousel ads get 72% more conversions for products",
+        "video": "15-second videos optimal, hook in first 3 seconds",
+        "testimonials": "Video testimonials convert 3x better than images"
+      },
+      
+      "copyFormulas": {
+        "pas": "Problem → Agitate → Solution works for pain points",
+        "aida": "Attention → Interest → Desire → Action for products",
+        "hook": "Start with 'Stop scrolling if...' or question",
+        "cta": "'Learn More' beats 'Buy Now' for cold traffic"
+      }
+    },
+    
+    "secretSauces": {
+      "dynamicCreative": "Let Facebook optimize combinations - beats manual 70% of time",
+      "broadTargeting": "With good creative, broad beats interest targeting",
+      "adsLibrary": "Spy on competitors at facebook.com/ads/library",
+      "seasonality": "CPMs spike 40% in Q4, plan budgets accordingly"
+    },
+    
+    "ios14Updates": {
+      "aggregatedEvents": "Limited to 8 conversion events per domain",
+      "attribution": "28-day click reduced to 7-day click/1-day view",
+      "solution": "Use Conversions API for server-side tracking",
+      "workaround": "Lead forms on Facebook bypass iOS14 entirely"
+    }
+  },
+  
+  "googleAds": {
+    "costBenchmarks": {
+      "searchCPC": {
+        "bodyContouring": "£3-8 per click",
+        "solarPV": "£2-6 per click",
+        "legal": "£10-50 per click",
+        "ecommerce": "£0.50-3 per click"
+      },
+      "conversionRates": {
+        "search": "3-5% typical",
+        "shopping": "1-2% typical",
+        "display": "0.5-1% typical",
+        "youtube": "0.3-0.8% typical"
+      }
+    },
+    
+    "winningStrategies": {
+      "searchCampaigns": {
+        "matchTypes": "Start with phrase match, add exact after data",
+        "negatives": "Add 100+ negative keywords before launching",
+        "qualityScore": "10/10 QS cuts CPC by 50%",
+        "extensions": "Use all 4 sitelinks, callouts, structured snippets"
+      },
+      
+      "shoppingCampaigns": {
+        "structure": "Single product ad groups for control",
+        "bidding": "Target ROAS after 50+ conversions",
+        "feed": "Title optimization more important than images",
+        "negatives": "Exclude kids, cheap, free, used"
+      },
+      
+      "performanceMax": {
+        "warning": "Cannibalizes brand search if not excluded",
+        "assetGroups": "Create separate groups for each product category",
+        "signals": "Customer list upload crucial for success",
+        "budget": "Needs £50+/day to work properly"
+      }
+    },
+    
+    "hiddenGems": {
+      "callOnlyAds": "50% cheaper than regular search for services",
+      "gmb": "Google My Business ads 70% cheaper CPC",
+      "discovery": "Discovery campaigns perfect for consideraton stage",
+      "customerMatch": "Upload email lists for 2x ROAS"
+    }
+  },
+  
+  "tiktokAds": {
+    "reality": {
+      "demographics": "40% of users are 30+, not just Gen Z",
+      "costs": "CPMs £2-6, much cheaper than Facebook",
+      "creative": "Native content beats polished ads 10:1"
+    },
+    
+    "winningFormulas": {
+      "spark": "Spark Ads (boost organic posts) get 3x engagement",
+      "ugc": "Creator marketplace gets authentic content cheap",
+      "hooks": "Pattern interrupt in first 1 second crucial",
+      "length": "21-34 seconds optimal for conversions"
+    },
+    
+    "targeting": {
+      "interests": "Less sophisticated than FB but improving",
+      "behaviors": "Purchase behavior targeting very effective",
+      "lookalikes": "Need 10k+ seeds for good performance"
+    }
+  },
+  
+  "linkedinAds": {
+    "b2bGoldmine": {
+      "costs": "£5-15 CPC but worth it for B2B",
+      "targeting": "Job title + company size + industry = perfect",
+      "formats": "Sponsored InMail gets 50% open rates",
+      "content": "Case studies and whitepapers beat direct selling"
+    },
+    
+    "strategies": {
+      "thoughtLeadership": "CEO posts promoted = massive authority",
+      "eventPromotion": "Webinar signups £20-50 each",
+      "abm": "Account-based marketing with company targeting",
+      "leadGen": "Native lead forms convert 3x better"
+    }
+  },
+  
+  "universalTruths": {
+    "creative": "Creative is 70% of performance, targeting 30%",
+    "testing": "Test big swings, not button colors",
+    "attribution": "Last-click lies, use data-driven attribution",
+    "ltv": "Optimize for LTV not CPA for real growth",
+    "seasonality": {
+      "q1": "January great for fitness, finance, education",
+      "q2": "Wedding season, home improvement peak",
+      "q3": "Back to school, lowest CPMs of year",
+      "q4": "Black Friday chaos, CPMs double"
+    }
+  },
+  
+  "platformArbitrage": {
+    "strategy": "Where attention exceeds ad spend = opportunity",
+    "current": {
+      "underpriced": "TikTok, Pinterest, Reddit ads",
+      "saturated": "Facebook feed, Google search",
+      "emerging": "Connected TV, podcast ads, Spotify"
+    }
+  },
+  
+  "conversionOptimization": {
+    "landingPages": {
+      "matchMessage": "Landing page must match ad message exactly",
+      "loadSpeed": "Every second delay = 20% fewer conversions",
+      "mobile": "70% of traffic is mobile, design mobile-first",
+      "trust": "Reviews, badges, guarantees above fold"
+    },
+    
+    "funnels": {
+      "microCommitments": "Email → Quiz → Booking beats direct booking",
+      "twoStep": "Two-step forms convert 30% better",
+      "exitIntent": "Exit popups save 10-15% of abandoners",
+      "retargeting": "7 touchpoints needed on average"
+    }
+  },
+  
+  "trackingAndAnalytics": {
+    "setup": {
+      "gtm": "Google Tag Manager for everything",
+      "fb": "Conversions API + Pixel for redundancy",
+      "utm": "UTM parameters on every single link",
+      "crm": "Closed-loop reporting with CRM essential"
+    },
+    
+    "metrics": {
+      "vanity": "Impressions, clicks, CTR don't pay bills",
+      "real": "CAC, LTV, payback period, cash flow",
+      "leading": "Cart adds, email signups predict sales",
+      "lagging": "ROAS, revenue confirm success"
+    }
+  },
+  
+  "budgetAllocation": {
+    "70-20-10": "70% proven, 20% iterate, 10% experimental",
+    "testing": "5-10% budget for creative testing always",
+    "platforms": "Diversify: never >60% on one platform",
+    "scaling": {
+      "horizontal": "New audiences before increasing budget",
+      "vertical": "Increase budget 20% every 3 days max"
+    }
+  }
+}

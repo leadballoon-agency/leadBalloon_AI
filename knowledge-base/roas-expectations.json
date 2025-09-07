@@ -1,0 +1,122 @@
+{
+  "unrealisticExpectations": {
+    "whatTheyExpect": {
+      "aesthetics": "4-9x ROAS immediately",
+      "fitness": "5-10x ROAS in first month",
+      "dental": "3-5x ROAS on high-ticket",
+      "general": "Profit from day one without understanding LTV"
+    },
+    "reality": {
+      "goodROAS": "2-3x",
+      "excellentROAS": "3-4x",
+      "unicornROAS": "4-5x",
+      "truth": "Most quit at 2x thinking they're failing when they're actually winning"
+    }
+  },
+  
+  "theNumbersThatMatter": {
+    "notThese": [
+      "Cost per click",
+      "CTR",
+      "Impressions",
+      "Reach"
+    ],
+    "theseOnes": {
+      "LTV": "Lifetime Value - What's a customer worth over 2 years?",
+      "CAC": "Customer Acquisition Cost - What does it cost to get them?",
+      "margin": "Profit Margin - What do you keep after costs?",
+      "conversionRate": "Lead to Sale - How many leads become customers?",
+      "repeatRate": "How often do they come back?",
+      "referralValue": "How many friends do they bring?"
+    }
+  },
+  
+  "theUnlimitedBudgetFormula": {
+    "step1": {
+      "title": "Know Your True Numbers",
+      "example": "Aesthetics clinic: LTV £3,600 (6 treatments over 18 months)",
+      "math": "Can afford £1,200 CAC and still 3x profit"
+    },
+    "step2": {
+      "title": "Implement SLO",
+      "example": "£47 skin analysis covers lead costs",
+      "math": "20 SLOs = £940 = 100 free leads"
+    },
+    "step3": {
+      "title": "Infinite Scale",
+      "formula": "When CAC < (LTV × Margin) + SLO Revenue = UNLIMITED BUDGET",
+      "reality": "You're literally printing money. Facebook becomes your ATM."
+    }
+  },
+  
+  "conversationHooks": [
+    "Look, everyone expects 5x ROAS but the smartest clinics are happy with 1.5x. Want to know why?",
+    "What if I told you that you could have an unlimited ad budget? It's about knowing three numbers...",
+    "Your competitors are probably losing money on ads and don't even know it. But they're still winning. Here's how...",
+    "The clinics spending £50k/month on Facebook aren't getting 10x ROAS. They just know their LTV."
+  ],
+  
+  "mindBlowingInsights": {
+    "aesthetic": {
+      "insight": "Botox client LTV is £4,800 over 2 years (4 sessions/year × £300 × 2 years)",
+      "reality": "You can 'lose' money for 6 months and still win",
+      "sloPlay": "£37 consultation pays for 3 leads. The math becomes unbeatable."
+    },
+    "fitness": {
+      "insight": "Gym member LTV is £1,440 (£60/month × 24 months average retention)",
+      "reality": "Can afford £500 CAC if you know they'll stay 2 years",
+      "sloPlay": "£27 nutrition plan = 20 free leads per sale"
+    },
+    "dental": {
+      "insight": "Invisalign patient brings 2.3 referrals worth £8,050 total",
+      "reality": "Can spend £2,000 to acquire and still profit massively",
+      "sloPlay": "£97 whitening kit funds entire campaign"
+    }
+  },
+  
+  "expectationEducation": {
+    "openingGambit": "Can I be straight with you? Your ROAS expectations might be killing your business...",
+    "theReveal": "Most successful clinics are happy with 1.5-2x ROAS because they understand LTV",
+    "theMindshift": "It's not about immediate profit. It's about customer acquisition at scale.",
+    "theCloseToSLO": "But what if you could get 'infinite ROAS' by making your ads free? That's SLO..."
+  },
+  
+  "competitorIntelligence": {
+    "whatTheyDontKnow": [
+      "Big spenders have 1.2-1.8x ROAS but 5x LTV:CAC ratio",
+      "They use SLOs to fund aggressive acquisition",
+      "They measure success at 90 days, not 7 days",
+      "They know exactly what they can afford to spend"
+    ],
+    "whatMakesThemUnbeatable": "They can outspend everyone because their unit economics work"
+  },
+  
+  "theSecretSauce": {
+    "formula": "Know Your Numbers + SLO Strategy + Patience = Market Domination",
+    "example": {
+      "withoutSLO": {
+        "budget": "£2,000/month",
+        "leads": "100",
+        "customers": "5",
+        "revenue": "£2,000",
+        "profit": "£0"
+      },
+      "withSLO": {
+        "budget": "£2,000/month",
+        "sloRevenue": "£2,000 (covers ad spend)",
+        "leads": "100 (now FREE)",
+        "customers": "5",
+        "revenue": "£2,000",
+        "profit": "£2,000",
+        "scaleability": "UNLIMITED - every lead is profit"
+      }
+    }
+  },
+  
+  "objectionHandlers": {
+    "cantAffordToWait": "Your competitors are playing the long game. That's why they're winning.",
+    "needProfitNow": "SLO gives you profit from day one PLUS long-term customers",
+    "tooRisky": "The risk is NOT knowing your numbers. That's gambling, not business.",
+    "dontHaveData": "Start tracking now. In 90 days you'll know exactly what you can afford."
+  }
+}

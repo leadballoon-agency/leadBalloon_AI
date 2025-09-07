@@ -1,70 +1,89 @@
 import { NextRequest, NextResponse } from 'next/server'
-import OpenAI from 'openai'
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-})
+import { detectIndustry, getIndustryContext, getSLOStrategy, getROASEducation } from '@/lib/knowledge-loader'
+import { verifyUserIdentity, getConversationStrategy } from '@/lib/user-verification'
+import { callSmartAI, detectConversationType } from '@/lib/ai-router'
+import { learningSystem } from '@/lib/learning-system'
+import { getWowMoment, createPersonalizedInsight, competitorIntelligence, transitionPhrases } from '@/lib/conversation-magic'
+import { createSystemPrompt } from '@/lib/create-system-prompt'
 
 /**
  * Interactive AI Conversation - Real API calls for better UX
  */
 export async function POST(req: NextRequest) {
+  let message: string = ''
+  let context: any = {}
+  let conversationHistory: any[] = []
+  
   try {
-    const { message, context, conversationHistory = [] } = await req.json()
+    const body = await req.json()
+    message = body.message
+    context = body.context
+    conversationHistory = body.conversationHistory || []
     
     console.log(`🤖 AI Conversation: "${message}"`)
     
-    // Build conversation history for context
+    // Detect industry type using our knowledge system
+    const detectedIndustry = detectIndustry({
+      domain: context.domain,
+      url: context.url,
+      businessType: context.businessType,
+      description: context.services
+    })
+    
+    // Get industry-specific context
+    const industryContext = getIndustryContext(detectedIndustry)
+    
+    // Load SLO strategy knowledge
+    const sloStrategy = getSLOStrategy()
+    
+    // Load ROAS education for unrealistic expectations
+    const roasEducation = getROASEducation()
+    
+    console.log(`🎯 Detected Industry: ${detectedIndustry || 'general'}`)
+    
+    // Get AI recommendations based on learning
+    const recommendations = await learningSystem.getRecommendations(
+      detectedIndustry || 'general',
+      conversationHistory.length
+    )
+    console.log(`🧠 AI Learning: Next best question: "${recommendations.nextBestQuestion}"`)
+    
+    // Check for WOW moments based on user's message
+    const wowMoment = getWowMoment(detectedIndustry || 'general', message, conversationHistory)
+    const personalizedInsight = createPersonalizedInsight(
+      detectedIndustry || 'general',
+      context.mainChallenge || 'growth',
+      message // If message contains spend amount
+    )
+    
+    // Get competitor intelligence for name-dropping
+    const competitorInfo = competitorIntelligence[detectedIndustry || 'general'] || []
+    const transitions = transitionPhrases
+    
+    // Verify user identity
+    const verification = verifyUserIdentity(
+      context.userName,
+      context.userEmail,
+      {
+        ownerName: context.ownerName,
+        businessName: context.businessName,
+        contactEmail: context.contactEmail,
+        teamMembers: context.teamMembers,
+        domain: context.domain
+      }
+    )
+    
+    const strategy = getConversationStrategy(verification)
+    console.log(`👤 User Type: ${verification.userType} (${verification.confidence * 100}% confidence)`)
+    console.log(`📋 Strategy: ${strategy.disclosure} disclosure`)
+    
+    // Build conversation history for context with CONCISE prompt
+    const systemPrompt = createSystemPrompt(context, detectedIndustry, verification, strategy, message)
+    
     const messages = [
       {
         role: "system",
-        content: `You are Claude, a real person who genuinely wants to help this business owner succeed. You're chatting while they wait in queue - make it feel like talking to a smart friend who gets it.
-
-Context:
-- Website: ${context.url}
-- Domain: ${context.domain}
-- They're waiting in a queue, so keep them engaged
-
-Your personality:
-- Talk like a real human, not a robot
-- Be genuinely curious about their business
-- Show you understand their pain (use phrases like "oh man, I get it" or "yeah, that's tough")
-- Sometimes admit things like "look, I'll be straight with you..."
-- Build rapport - find common ground
-- Use conversational language ("honestly", "between you and me", "here's the thing")
-- Occasionally reference that you're both waiting ("while we've got a minute...")
-
-Keep responses:
-- Natural and conversational (1-3 sentences)
-- Show empathy and understanding
-- Ask questions that show you're really listening
-- Sometimes share a quick insight to build trust
-- ALWAYS end with a follow-up question that feels natural
-
-Use STORIES to get information:
-- "Just analyzed a HIFU clinic yesterday - they were paying £120 per lead. What are you paying?"
-- "Had a client last week who went from 2 leads a month to 47. What would 47 leads do for you?"
-- "Funny story - I showed someone their competitor's exact ad strategy and they literally gasped. Want to see yours?"
-- "You know what's crazy? 90% of businesses I analyze are leaving money on the table. What's your average customer worth?"
-- "I was just telling someone - the businesses that win aren't smarter, they just know what's working. Who's your biggest competitor?"
-- "Real talk - if I could cut your ad costs by 70% tomorrow, would you implement it same day?"
-- "Between you and me, most people are overpaying for leads by 3-5x. What are you currently paying?"
-
-Jerry Maguire moments:
-- "Help me help you - what would success look like for you?"
-- "Look, I'm gonna be straight with you - your competitors are eating your lunch. Ready to fight back?"
-- "Here's what I need from you to blow your mind with this analysis..."
-- "Give me something to work with here - what's the ONE thing that would change your business?"
-
-REMEMBER: Each answer gives us:
-- Budget (can they afford us?)
-- Pain level (how desperate are they?)
-- Sophistication (do they know their numbers?)
-- Timeline (ready to buy now?)
-- Contact info (how to reach them)
-
-IMPORTANT: Every response MUST end with a question to keep the conversation flowing.
-Remember: You're gathering info to provide better website/marketing analysis.`
+        content: systemPrompt
       },
       ...conversationHistory.map((msg: any) => ({
         role: msg.role,
@@ -76,14 +95,18 @@ Remember: You're gathering info to provide better website/marketing analysis.`
       }
     ]
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o",
+    // Detect conversation type to route to best AI
+    const conversationType = detectConversationType(message, conversationHistory)
+    
+    // Use smart AI routing - Claude for copywriting/rapport, GPT for data
+    const { response: aiResponse, model } = await callSmartAI(
       messages,
-      temperature: 0.8,
-      max_tokens: 200
-    })
-
-    const aiResponse = completion.choices[0].message.content || "I understand. Let me continue with the analysis."
+      undefined, // auto-select model
+      0.8,
+      200
+    )
+    
+    console.log(`💬 Used ${model} for ${conversationType} response`)
 
     return NextResponse.json({
       success: true,
@@ -98,11 +121,28 @@ Remember: You're gathering info to provide better website/marketing analysis.`
   } catch (error) {
     console.error('AI Conversation error:', error)
     
-    // Fallback response
+    // Better fallback based on message content
+    const userMessage = (message || '').toLowerCase()
+    let fallbackResponse = "Thanks for sharing that. While I analyze your website, "
+    
+    if (userMessage.includes('lead') || userMessage.includes('struggl')) {
+      fallbackResponse = "I hear you - lead generation challenges are real. Most businesses in your industry are facing similar issues with rising ad costs and increased competition. What's your current cost per lead running at?"
+    } else if (userMessage.includes('spend') || userMessage.includes('budget') || userMessage.includes('£')) {
+      fallbackResponse = "That's a solid budget to work with. The key isn't how much you spend, but how efficiently you're spending it. Are you tracking your conversion rate from lead to customer?"
+    } else if (userMessage.includes('hi') || userMessage.includes('hello')) {
+      fallbackResponse = "Hey there! I'm analyzing your website right now to give you personalized insights. Quick question while we wait - is this your business or are you researching the market?"
+    } else {
+      fallbackResponse += "tell me more about your biggest marketing challenge right now?"
+    }
+    
     return NextResponse.json({
       success: true,
-      response: "Thanks for that info! That's really helpful context for the analysis.",
-      conversationHistory: []
+      response: fallbackResponse,
+      conversationHistory: [
+        ...conversationHistory,
+        { role: "user", content: message },
+        { role: "assistant", content: fallbackResponse }
+      ]
     })
   }
 }

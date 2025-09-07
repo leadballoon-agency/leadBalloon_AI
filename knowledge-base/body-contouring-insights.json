@@ -1,0 +1,231 @@
+{
+  "body_contouring": {
+    "market_insights": {
+      "industry_stats": {
+        "market_size": "£2.8 billion UK aesthetics market",
+        "growth_rate": "12% annual growth",
+        "average_treatment_value": "£2,400 lifetime customer value",
+        "conversion_rates": {
+          "cold_traffic": "0.5-1.5%",
+          "warm_traffic": "3-8%",
+          "consultation_to_treatment": "35-45%"
+        }
+      },
+      "customer_demographics": {
+        "primary": {
+          "age": "35-55",
+          "gender": "75% female, 25% male",
+          "income": "£35,000+",
+          "location": "Urban/suburban"
+        },
+        "motivations": [
+          "Post-pregnancy body restoration",
+          "Stubborn fat resistant to diet/exercise",
+          "Body confidence for special events",
+          "Age-related body changes",
+          "Quick results without surgery"
+        ]
+      }
+    },
+    "competitor_intelligence": {
+      "skulpt": {
+        "lead_cost": "£15 per CoolSculpting lead",
+        "strategies": "Facebook local awareness ads, before/after galleries",
+        "offers": "Free consultation + body composition scan"
+      },
+      "3d_lipo": {
+        "pricing": "Raised prices 40% and still fully booked",
+        "hook": "Non-surgical alternative to liposuction",
+        "guarantee": "Measurable inch loss or money back"
+      },
+      "transform_hospital_group": {
+        "model": "High-volume, aggressive sales process",
+        "spend": "£50k+/month on Facebook ads",
+        "funnel": "Free consultation → same-day close → finance options"
+      }
+    },
+    "winning_hooks": {
+      "headlines": [
+        "Freeze Away Stubborn Fat in Your Lunch Break",
+        "The Celebrity Secret to Losing 2 Dress Sizes Without Surgery",
+        "Why Manchester Women Are Choosing CoolSculpting Over Gym Memberships",
+        "Doctor-Led Body Contouring: Real Results in 6 Weeks",
+        "Warning: Don't Try Body Contouring Until You Read This"
+      ],
+      "pain_points": [
+        "I work out but can't shift my belly fat",
+        "My clothes don't fit like they used to",
+        "I'm too scared of surgery but want results",
+        "I don't have time for long recovery periods",
+        "I've tried every diet and nothing works"
+      ],
+      "transformations": [
+        "From size 14 to size 10 in 12 weeks",
+        "Lost 4 inches off waist without changing diet",
+        "Mum of 3 gets pre-baby body back",
+        "Finally wore a bikini at 52",
+        "6-pack abs revealed after 3 treatments"
+      ]
+    },
+    "pricing_strategies": {
+      "models": [
+        {
+          "type": "Per area pricing",
+          "example": "£450 per area, package of 3 areas for £1,200",
+          "psychology": "Clear, simple pricing reduces decision friction"
+        },
+        {
+          "type": "Membership model",
+          "example": "£199/month for unlimited treatments",
+          "psychology": "Recurring revenue, higher LTV"
+        },
+        {
+          "type": "Results-based pricing",
+          "example": "£2,000 for guaranteed 4-inch loss",
+          "psychology": "Risk reversal, confidence in results"
+        }
+      ],
+      "finance_options": [
+        "0% finance over 12 months",
+        "Buy now, pay later (Klarna/ClearPay)",
+        "Treatment payment plans"
+      ]
+    },
+    "facebook_ad_patterns": {
+      "successful_campaigns": {
+        "campaign_1": {
+          "business": "Elite Body Contouring Manchester",
+          "runtime": "94 days straight",
+          "hook": "Limited spots for CoolSculpting at 50% off",
+          "cta": "Book free consultation",
+          "results": "47 consultations booked per month"
+        },
+        "campaign_2": {
+          "business": "Sculpt Clinic Leeds",
+          "runtime": "6 months",
+          "hook": "Before/after transformation carousel",
+          "cta": "See if you qualify",
+          "results": "£12 cost per lead, 38% show rate"
+        }
+      },
+      "ad_elements": {
+        "visuals": [
+          "Before/after photos (with consent)",
+          "Treatment process videos",
+          "Practitioner credentials",
+          "Clinic interior shots",
+          "Happy client testimonials"
+        ],
+        "copy_framework": {
+          "hook": "Call out specific problem",
+          "agitate": "Describe emotional pain",
+          "solution": "Present treatment as answer",
+          "proof": "Show results/testimonials",
+          "cta": "Book free consultation"
+        }
+      }
+    },
+    "conversion_optimization": {
+      "website_elements": {
+        "above_fold": [
+          "Clear headline with benefit",
+          "Before/after gallery",
+          "Practitioner credentials",
+          "Book consultation CTA",
+          "Trust badges (CQC, Save Face)"
+        ],
+        "trust_builders": [
+          "Google reviews widget",
+          "Treatment demonstration videos",
+          "FAQ addressing main concerns",
+          "Price transparency",
+          "Practitioner bios and qualifications"
+        ],
+        "conversion_tools": [
+          "Live chat with treatment coordinator",
+          "Body assessment calculator",
+          "Virtual consultation option",
+          "SMS appointment reminders",
+          "Abandoned cart recovery emails"
+        ]
+      },
+      "funnel_optimization": {
+        "awareness": "Local Facebook/Instagram ads",
+        "interest": "Free guide: 'Is Body Contouring Right for You?'",
+        "consideration": "Email nurture with success stories",
+        "decision": "Limited-time offer or exclusive bonus",
+        "retention": "Maintenance packages and referral rewards"
+      }
+    },
+    "objection_handlers": {
+      "too_expensive": {
+        "response": "Compare to surgical alternatives (£6k+ for lipo)",
+        "solution": "Offer finance options and package deals"
+      },
+      "does_it_work": {
+        "response": "Show clinical studies and real client results",
+        "solution": "Offer money-back guarantee on measurable results"
+      },
+      "is_it_safe": {
+        "response": "FDA/CE approved, doctor-led clinic",
+        "solution": "Free consultation to assess suitability"
+      },
+      "how_long_results": {
+        "response": "Permanent fat cell reduction with healthy lifestyle",
+        "solution": "Include maintenance plan in package"
+      },
+      "pain_concerns": {
+        "response": "Most clients read or work during treatment",
+        "solution": "Offer trial session at reduced rate"
+      }
+    },
+    "real_stories": {
+      "case_studies": [
+        {
+          "client": "Sarah, 42, Manchester",
+          "problem": "Post-pregnancy belly wouldn't shift despite gym 5x week",
+          "solution": "6 CoolSculpting sessions over 3 months",
+          "result": "Lost 5 inches, back in pre-pregnancy jeans",
+          "spend": "£2,400 (financed over 12 months)"
+        },
+        {
+          "client": "James, 38, Liverpool",
+          "problem": "Man boobs affecting confidence",
+          "solution": "4 sessions targeting chest area",
+          "result": "Flat chest, started dating again",
+          "spend": "£1,800"
+        },
+        {
+          "client": "Linda, 55, Leeds",
+          "problem": "Menopausal weight gain around middle",
+          "solution": "3D Lipo combination treatment",
+          "result": "Dropped 2 dress sizes for daughter's wedding",
+          "spend": "£3,200"
+        }
+      ]
+    },
+    "conversation_hooks": {
+      "qualifying_questions": [
+        "What areas are you most frustrated with?",
+        "Have you tried non-surgical treatments before?",
+        "What would change in your life if you achieved your body goals?",
+        "How soon do you want to see results?",
+        "What's holding you back from booking a consultation?"
+      ],
+      "value_statements": [
+        "Most clients see results after just one session",
+        "It's like getting liposuction results without the surgery",
+        "You can literally do this in your lunch break",
+        "The fat cells are gone permanently",
+        "We've helped over 500 local women transform their bodies"
+      ],
+      "urgency_creators": [
+        "We only have 3 appointment slots left this week",
+        "The 50% off offer ends Friday",
+        "Summer bodies are made in winter",
+        "Most clinics are booked 3-4 weeks out",
+        "New client special - this month only"
+      ]
+    }
+  }
+}

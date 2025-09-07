@@ -1,0 +1,271 @@
+{
+  "localSEO": {
+    "googleMyBusiness": {
+      "ranking_factors": {
+        "proximity": "25% of ranking",
+        "relevance": "25% of ranking",
+        "prominence": "50% of ranking"
+      },
+      "optimization": {
+        "completeness": "100% profile = 70% more views",
+        "photos": "Businesses with 100+ photos get 520% more calls",
+        "posts": "Weekly posts = 2x engagement",
+        "reviews": "10+ reviews = trusted by 90% of searchers",
+        "responses": "Respond to all reviews within 24 hours",
+        "categories": "Primary + up to 9 additional",
+        "attributes": "Fill every applicable attribute"
+      },
+      "hacktics": {
+        "review_velocity": "1-2 reviews per week optimal",
+        "photo_types": "Interior, exterior, team, products, at work",
+        "post_types": "Offers get 2x clicks vs updates",
+        "Q&A": "Seed with your own questions and answers",
+        "booking_link": "Direct booking = 30% more conversions"
+      }
+    },
+    
+    "citations": {
+      "importance": "Consistency across 50+ directories",
+      "NAP": "Name, Address, Phone must be identical",
+      "top_directories": {
+        "UK": ["Yell", "Thomson Local", "Yelp UK", "Scoot", "BritainBusinessDirectory"],
+        "universal": ["Facebook", "Bing Places", "Apple Maps", "TripAdvisor", "Trustpilot"]
+      },
+      "industry_specific": {
+        "medical": ["Doctify", "WhatClinic", "NHS.uk"],
+        "beauty": ["Treatwell", "Booksy", "Fresha"],
+        "home_services": ["Checkatrade", "TrustATrader", "MyBuilder"]
+      }
+    },
+    
+    "local_pack": {
+      "triggers": "Near me, city name, neighborhood",
+      "factors": {
+        "GMB_optimization": "30%",
+        "review_signals": "15%",
+        "on_page_signals": "20%",
+        "link_signals": "20%",
+        "citation_signals": "10%",
+        "behavioral": "5%"
+      },
+      "winning": "Be in top 3 or be invisible"
+    }
+  },
+  
+  "technicalSEO": {
+    "site_speed": {
+      "benchmarks": {
+        "LCP": "Under 2.5 seconds",
+        "FID": "Under 100ms",
+        "CLS": "Under 0.1"
+      },
+      "impact": "1 second delay = 7% fewer conversions",
+      "tools": "PageSpeed Insights, GTmetrix, WebPageTest",
+      "quick_wins": {
+        "images": "WebP format, lazy loading, CDN",
+        "caching": "Browser and server-side",
+        "minification": "CSS, JS, HTML",
+        "hosting": "Upgrade to better server"
+      }
+    },
+    
+    "mobile": {
+      "stats": "60% of searches are mobile",
+      "responsive": "Not optional anymore",
+      "AMP": "Not worth it for most sites",
+      "mobile_first_index": "Google primarily uses mobile version"
+    },
+    
+    "crawlability": {
+      "robots_txt": "Don't block important pages",
+      "sitemap": "XML sitemap updated automatically",
+      "internal_linking": "Every page within 3 clicks",
+      "orphan_pages": "Find and fix or delete",
+      "duplicate_content": "Canonical tags crucial"
+    },
+    
+    "schema_markup": {
+      "types": {
+        "local_business": "Essential for all local businesses",
+        "product": "For e-commerce",
+        "FAQ": "Great for snippets",
+        "howTo": "Step-by-step content",
+        "review": "Star ratings in search"
+      },
+      "impact": "30% higher CTR with rich snippets",
+      "testing": "Google's Rich Results Test tool"
+    }
+  },
+  
+  "contentSEO": {
+    "keyword_research": {
+      "tools": {
+        "free": "Google Keyword Planner, Answer The Public, Google Suggest",
+        "paid": "Ahrefs, SEMrush, Moz"
+      },
+      "metrics": {
+        "volume": "Minimum 100 searches/month",
+        "difficulty": "Under 30 for new sites",
+        "intent": "Commercial > Informational for conversions",
+        "trends": "Check Google Trends for seasonality"
+      },
+      "long_tail": "3-5 word phrases = 70% of searches"
+    },
+    
+    "on_page": {
+      "title_tags": {
+        "length": "50-60 characters",
+        "format": "Primary Keyword | Brand",
+        "clickbait": "Numbers, brackets, current year"
+      },
+      "meta_descriptions": {
+        "length": "150-160 characters",
+        "CTA": "Include action words",
+        "USP": "What makes you different"
+      },
+      "headers": {
+        "H1": "One per page, include main keyword",
+        "H2_H3": "Logical structure, keyword variations",
+        "featured_snippets": "H2 with question, paragraph answer"
+      },
+      "content": {
+        "length": "1,500+ words for competitive terms",
+        "keywords": "1-2% density, use variations",
+        "readability": "8th grade level",
+        "multimedia": "Images, videos increase time on page"
+      }
+    },
+    
+    "content_strategy": {
+      "hub_and_spoke": "Pillar content + supporting articles",
+      "topical_authority": "Cover topic comprehensively",
+      "freshness": "Update old content quarterly",
+      "user_intent": {
+        "informational": "How-to, what is, guide",
+        "commercial": "Best, review, comparison",
+        "transactional": "Buy, price, cheap, deal",
+        "navigational": "Brand name, login"
+      }
+    }
+  },
+  
+  "linkBuilding": {
+    "quality_over_quantity": "10 good links > 100 bad links",
+    
+    "tactics": {
+      "digital_PR": {
+        "data_studies": "Create newsworthy research",
+        "press_releases": "Real news only",
+        "HARO": "Help a Reporter Out responses",
+        "expert_roundups": "Contribute expertise"
+      },
+      "local_links": {
+        "chambers": "Chamber of Commerce",
+        "sponsors": "Local events, teams",
+        "partnerships": "Complementary businesses",
+        "local_news": "Community involvement"
+      },
+      "content_based": {
+        "guest_posts": "High-quality sites only",
+        "broken_link": "Find and replace broken links",
+        "resource_pages": "Get listed on relevant pages",
+        "testimonials": "Give testimonials for links"
+      }
+    },
+    
+    "avoid": {
+      "PBNs": "Private blog networks = penalty",
+      "paid_links": "Without nofollow = penalty",
+      "link_farms": "Obvious spam",
+      "excessive_exact_match": "Looks unnatural"
+    }
+  },
+  
+  "industrySpecificSEO": {
+    "medical": {
+      "YMYL": "Your Money Your Life - higher standards",
+      "EAT": "Expertise, Authority, Trust crucial",
+      "author_bios": "Medical credentials required",
+      "medical_schema": "Use medical condition schema"
+    },
+    
+    "ecommerce": {
+      "product_pages": "Unique descriptions, not manufacturer",
+      "category_pages": "Add unique content, not just products",
+      "faceted_navigation": "Careful with URL parameters",
+      "reviews": "User-generated content gold"
+    },
+    
+    "legal": {
+      "practice_areas": "Individual pages for each",
+      "location_pages": "City + practice area combos",
+      "case_results": "Great for trust and keywords",
+      "FAQ": "Address common legal questions"
+    },
+    
+    "home_services": {
+      "service_pages": "Service + location variations",
+      "before_after": "Gallery pages rank well",
+      "cost_guides": "Price/cost keywords valuable",
+      "emergency": "24/7, emergency, same-day keywords"
+    }
+  },
+  
+  "competitorAnalysis": {
+    "spy_tools": {
+      "organic": "See competitor's ranking keywords",
+      "backlinks": "Steal their link sources",
+      "content_gaps": "Find what they're missing",
+      "technical": "Learn from their mistakes"
+    },
+    
+    "actionable": {
+      "top_pages": "Recreate but better",
+      "keyword_gaps": "Target keywords they missed",
+      "link_opportunities": "Get links from same sources",
+      "content_calendar": "Publish before they do"
+    }
+  },
+  
+  "measuring_success": {
+    "KPIs": {
+      "organic_traffic": "Month over month growth",
+      "keyword_rankings": "Track top 20 keywords",
+      "conversions": "Not just traffic, but sales",
+      "local_visibility": "Local pack appearances"
+    },
+    
+    "tools": {
+      "free": "Google Analytics, Search Console",
+      "paid": "Ahrefs, SEMrush, Moz",
+      "rank_tracking": "SERPWatcher, AccuRanker",
+      "local": "BrightLocal, Whitespark"
+    },
+    
+    "reporting": {
+      "monthly": "Traffic, rankings, conversions",
+      "quarterly": "Link profile, competitor analysis",
+      "annually": "Full technical audit"
+    }
+  },
+  
+  "futureProofing": {
+    "voice_search": {
+      "optimization": "Natural language, questions",
+      "featured_snippets": "Position zero crucial",
+      "local": "'Near me' optimization"
+    },
+    
+    "AI_and_SGE": {
+      "helpful_content": "Focus on user value",
+      "EEAT": "Experience added to EAT",
+      "first_hand_experience": "Original research, case studies"
+    },
+    
+    "video_SEO": {
+      "YouTube": "2nd largest search engine",
+      "video_schema": "Get videos in search results",
+      "transcripts": "Accessibility and keywords"
+    }
+  }
+}

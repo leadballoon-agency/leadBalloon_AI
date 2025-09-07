@@ -1,0 +1,93 @@
+{
+  "strategy": "Self-Liquidating Offer (SLO)",
+  "simpleExplanation": "It's a way to get leads for FREE by offering something small that covers your ad costs",
+  "whenToUse": [
+    "Lead costs above £10",
+    "Competitive market with bidding wars",
+    "Long sales cycle needing nurturing",
+    "High-ticket service (£1000+)"
+  ],
+  "howItWorks": {
+    "problem": "You spend £500 on ads to get 50 leads at £10 each. Most don't buy immediately.",
+    "solution": "Offer a £27 mini-service. Just 19 people buying covers your entire £500 ad spend.",
+    "result": "The other 31 leads are FREE. Plus buyers are more likely to buy your main service."
+  },
+  "examples": {
+    "aesthetics": {
+      "mainService": "Full botox treatment £350",
+      "slo": "Skin consultation + vitamin shot £37",
+      "math": "14 consultations pays for 100 leads"
+    },
+    "fitness": {
+      "mainService": "12-week transformation £997",
+      "slo": "7-day meal plan + workout £27",
+      "math": "19 plans pays for 100 leads"
+    },
+    "dental": {
+      "mainService": "Invisalign £3500",
+      "slo": "Teeth whitening kit £47",
+      "math": "11 kits pays for 100 leads"
+    },
+    "medspa": {
+      "mainService": "PRP package £1200",
+      "slo": "Skin analysis + LED therapy £57",
+      "math": "9 sessions pays for 100 leads"
+    },
+    "chiropractic": {
+      "mainService": "Treatment plan £800",
+      "slo": "Posture assessment + adjustment £39",
+      "math": "13 assessments pays for 100 leads"
+    }
+  },
+  "conversationHooks": [
+    "I notice you're in a competitive market - have you heard of SLO strategy? It's how smart clinics get leads for free...",
+    "Your competitors are probably spending £20+ per lead. Want to know how to get them for £0?",
+    "What if I told you there's a way to make your ads pay for themselves?",
+    "You mentioned lead costs are high - there's a strategy called SLO that completely changes the game..."
+  ],
+  "objectionHandlers": {
+    "tooComplicated": "It's actually simple - you already have services, just package a small one differently",
+    "dontHaveTime": "Set it up once, runs forever. Takes 2 hours to implement, saves thousands monthly",
+    "wontWork": "Every successful clinic in competitive markets uses this. It's proven across thousands of businesses",
+    "tooSalesy": "You're providing real value upfront. It builds trust, not pushiness"
+  },
+  "implementation": {
+    "step1": "Pick your easiest/quickest service",
+    "step2": "Price it at 2-5x your cost per lead",
+    "step3": "Create simple landing page focusing on immediate value",
+    "step4": "Add to your ad funnel as 'Quick Win' option",
+    "step5": "Track: SLO buyers convert 3-5x better to main service"
+  },
+  "psychologyExplained": {
+    "commitment": "Small yes leads to big yes - it's psychology",
+    "trust": "They experience your service risk-free",
+    "qualification": "People who pay ANYTHING are serious buyers",
+    "reciprocity": "You over-deliver on small offer, they want to reciprocate"
+  },
+  "metrics": {
+    "withoutSLO": {
+      "adSpend": "£500",
+      "leads": "50",
+      "costPerLead": "£10",
+      "conversion": "2%",
+      "customers": "1",
+      "customerAcquisitionCost": "£500"
+    },
+    "withSLO": {
+      "adSpend": "£500",
+      "leads": "50",
+      "sloSales": "19 @ £27",
+      "revenue": "£513",
+      "netLeadCost": "£0",
+      "sloToMainConversion": "15%",
+      "customers": "3",
+      "customerAcquisitionCost": "£0"
+    }
+  },
+  "advancedTactics": {
+    "stackedSLO": "Multiple price points: £17 report → £47 audit → £197 trial",
+    "subscriptionSLO": "£27/month membership covers ongoing lead costs",
+    "bundleSLO": "Package 3 small services for higher ticket",
+    "limitedSLO": "Only 10 available creates urgency"
+  }
+}

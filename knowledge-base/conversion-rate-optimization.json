@@ -1,0 +1,300 @@
+{
+  "conversionBenchmarks": {
+    "industry_averages": {
+      "overall": "2.35%",
+      "top_25_percent": "5.31%",
+      "top_10_percent": "11.45%"
+    },
+    "by_industry": {
+      "bodyContouring": "3-5% landing page, 35-45% consultation to treatment",
+      "solarPV": "2-4% landing page, 15-25% survey to appointment",
+      "dental": "4-6% landing page, 40-50% consultation to treatment",
+      "ecommerce": "1-3% product page, 70% cart to purchase",
+      "b2b_services": "2-5% landing page, 20-30% demo to close",
+      "saas": "3-7% free trial, 15-20% trial to paid"
+    }
+  },
+  
+  "psychologyTriggers": {
+    "scarcity": {
+      "tactics": ["Limited spots", "Only X left", "Offer expires"],
+      "impact": "2.5x conversion increase",
+      "authenticity": "Must be real or trust destroyed"
+    },
+    
+    "social_proof": {
+      "types": {
+        "testimonials": "42% more effective with photo",
+        "reviews": "92% read reviews before buying",
+        "case_studies": "3x more convincing than claims",
+        "logos": "Client/media logos build instant trust",
+        "numbers": "Join 10,000+ customers"
+      },
+      "placement": "Above fold, near CTA, throughout page"
+    },
+    
+    "authority": {
+      "credentials": "Certifications, awards, years in business",
+      "media": "As seen on, featured in",
+      "expert": "Doctor-led, engineer-designed",
+      "guarantee": "Money-back, results, satisfaction"
+    },
+    
+    "reciprocity": {
+      "free_value": "Calculator, assessment, guide",
+      "consultation": "Free but valuable",
+      "trial": "Try before buy",
+      "sample": "Taste of full experience"
+    },
+    
+    "loss_aversion": {
+      "framing": "Don't miss out vs Get this",
+      "comparison": "What you're losing without this",
+      "regret": "Imagine if you don't act",
+      "FOMO": "Others are already benefiting"
+    }
+  },
+  
+  "landingPageAnatomy": {
+    "above_fold": {
+      "headline": {
+        "formula": "Get {Desired Result} Without {Pain Point}",
+        "length": "6-12 words optimal",
+        "clarity": "5-year-old should understand",
+        "match": "Must match ad message exactly"
+      },
+      "subheadline": {
+        "purpose": "Expand on promise",
+        "length": "15-25 words",
+        "specificity": "Include numbers, timeframe"
+      },
+      "hero_image": {
+        "relevance": "Show end result or product",
+        "people": "Faces increase trust 35%",
+        "direction": "Eyes looking at CTA",
+        "quality": "Professional, not stock"
+      },
+      "CTA": {
+        "color": "Contrasting, not matching",
+        "size": "Larger than other buttons",
+        "copy": "Action-oriented: Get, Start, Claim",
+        "urgency": "Now, Today, Instantly"
+      },
+      "trust_indicators": {
+        "immediate": "Reviews, ratings, badges",
+        "number": "2-3 maximum above fold",
+        "relevance": "Industry-specific"
+      }
+    },
+    
+    "body_content": {
+      "problem_agitation": {
+        "empathy": "We understand your struggle",
+        "pain_points": "Bullet list of problems",
+        "consequences": "What happens if not solved"
+      },
+      "solution_presentation": {
+        "benefits_not_features": "Results, not specifications",
+        "bullet_points": "Scannable, not paragraphs",
+        "visual_hierarchy": "Icons, colors, spacing"
+      },
+      "social_proof_section": {
+        "testimonials": "3-5 detailed ones",
+        "before_after": "Visual transformation",
+        "case_studies": "Specific results"
+      },
+      "FAQ": {
+        "objections": "Address top 5 concerns",
+        "schema": "FAQ schema for SEO",
+        "expansion": "Accordion style"
+      }
+    },
+    
+    "forms": {
+      "fields": {
+        "minimum": "Name, email, phone only",
+        "progressive": "Ask more after first submit",
+        "validation": "Real-time, helpful errors"
+      },
+      "multi_step": {
+        "conversion": "30% higher than single",
+        "progress": "Show step 1 of 3",
+        "commitment": "Easy first question"
+      },
+      "micro_commits": {
+        "quiz": "Interactive engagement",
+        "calculator": "Personalized results",
+        "assessment": "Custom recommendations"
+      }
+    }
+  },
+  
+  "mobileCRO": {
+    "stats": "70% of traffic is mobile",
+    "thumb_zone": "CTA in easy reach area",
+    "tap_targets": "44x44 pixel minimum",
+    "forms": "Avoid typing - use dropdowns",
+    "speed": "3 second load or lose 50%",
+    "simplified": "Less content than desktop",
+    "click_to_call": "Prominent phone button"
+  },
+  
+  "copywritingFormulas": {
+    "PAS": {
+      "structure": "Problem → Agitate → Solution",
+      "example": "Struggling with leads? → Competition winning → Our system fixes"
+    },
+    "AIDA": {
+      "structure": "Attention → Interest → Desire → Action",
+      "example": "Stop losing customers → See how we help → Imagine growth → Start today"
+    },
+    "BAB": {
+      "structure": "Before → After → Bridge",
+      "example": "5 leads/month → 50 leads/month → Here's how"
+    },
+    "4Ps": {
+      "structure": "Promise → Picture → Proof → Push",
+      "example": "Double revenue → Imagine success → Client results → Limited offer"
+    }
+  },
+  
+  "CTAOptimization": {
+    "button_copy": {
+      "first_person": "'Start my free trial' beats 'Start your free trial'",
+      "value_focused": "'Get instant access' beats 'Submit'",
+      "urgency": "'Claim now' beats 'Learn more'",
+      "specific": "'Get 30% off' beats 'Save money'"
+    },
+    "design": {
+      "color": "Orange/green highest converting",
+      "size": "20% larger than other elements",
+      "whitespace": "Breathing room around CTA",
+      "arrow": "→ increases clicks 12%"
+    },
+    "placement": {
+      "multiple": "Every scroll depth",
+      "sticky": "Mobile sticky footer",
+      "exit_intent": "Last chance popup"
+    }
+  },
+  
+  "trustBuilders": {
+    "guarantees": {
+      "money_back": "30-60 day standard",
+      "results": "Specific outcome promised",
+      "satisfaction": "No questions asked",
+      "placement": "Near CTA and price"
+    },
+    "security": {
+      "badges": "SSL, payment, privacy",
+      "payment_options": "Multiple trusted methods",
+      "privacy_policy": "Link clearly visible",
+      "contact": "Phone, email, address"
+    },
+    "transparency": {
+      "pricing": "Clear, no hidden fees",
+      "process": "What happens next",
+      "team": "Real people, real photos",
+      "timeline": "Delivery expectations"
+    }
+  },
+  
+  "pricingPsychology": {
+    "anchoring": {
+      "high_first": "Show premium option first",
+      "strike_through": "Was £999 Now £499",
+      "comparison": "Competitor charges £X"
+    },
+    "charm_pricing": {
+      "99_ending": "£99 vs £100",
+      "psychology": "Left digit effect",
+      "exceptions": "Luxury uses round numbers"
+    },
+    "bundling": {
+      "value_stack": "Worth £2000, get for £500",
+      "bonuses": "Add perceived value",
+      "packages": "Good, better, best"
+    },
+    "payment_options": {
+      "plans": "3 payments of £99",
+      "financing": "From £49/month",
+      "trial": "£1 for 7 days"
+    }
+  },
+  
+  "testingMethodology": {
+    "prioritization": {
+      "ICE": "Impact x Confidence x Ease",
+      "PIE": "Potential x Importance x Ease",
+      "focus": "Big changes over button colors"
+    },
+    "test_types": {
+      "A/B": "Two versions, one variable",
+      "multivariate": "Multiple variables",
+      "redirect": "Completely different pages",
+      "personalization": "Different per segment"
+    },
+    "sample_size": {
+      "calculator": "Use statistical significance",
+      "duration": "Minimum 2 weeks",
+      "cycles": "Account for weekly patterns"
+    },
+    "metrics": {
+      "primary": "Conversion rate",
+      "secondary": "Revenue per visitor",
+      "micro": "Add to cart, form starts",
+      "guardrail": "Bounce rate, quality"
+    }
+  },
+  
+  "urgencyTactics": {
+    "countdown_timers": {
+      "effectiveness": "2x conversion rate",
+      "types": "Evergreen vs real deadline",
+      "placement": "Near CTA, sticky bar"
+    },
+    "limited_quantity": {
+      "stock": "Only 3 left",
+      "slots": "5 spots remaining",
+      "bonuses": "First 50 customers"
+    },
+    "social_urgency": {
+      "viewing": "37 people looking now",
+      "purchased": "5 sold in last hour",
+      "cart": "3 in other carts"
+    }
+  },
+  
+  "personalization": {
+    "dynamic_content": {
+      "geo": "Local phone, currency",
+      "source": "Match ad message",
+      "behavior": "Return visitor message",
+      "device": "Mobile vs desktop"
+    },
+    "segmentation": {
+      "industry": "Specific use cases",
+      "role": "Decision maker vs user",
+      "stage": "Awareness vs decision"
+    }
+  },
+  
+  "checkoutOptimization": {
+    "cart_abandonment": {
+      "rate": "Average 70%",
+      "recovery": "Email series, retargeting",
+      "reasons": "Shipping cost, complexity"
+    },
+    "reduce_friction": {
+      "guest_checkout": "Don't force registration",
+      "autofill": "Address, payment",
+      "progress": "Show checkout steps",
+      "errors": "Inline validation"
+    },
+    "trust_signals": {
+      "security": "SSL, badges prominent",
+      "guarantee": "Return policy clear",
+      "support": "Live chat available"
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "prp": {
+    "market_insights": {
+      "industry_stats": {
+        "market_demographics": {
+          "hair_loss": {
+            "men": "25-55 professionals, £90,400 avg household income Richmond",
+            "women": "30-60, 50% UK women experience hair loss",
+            "key_stat": "37% cite social/dating as primary motivation"
+          },
+          "facial_rejuvenation": {
+            "age": "35-65 seeking non-surgical solutions",
+            "education": "66.5% degree-level in Richmond",
+            "growth": "Post-COVID facial procedures up 8%, men's up 26%"
+          }
+        },
+        "pricing_benchmarks": {
+          "harley_street": "£600-900 per session",
+          "prp_london": "£275 budget option",
+          "optimal_positioning": "£350-450 per session",
+          "packages": "3 sessions £950-1200 with payment plans"
+        }
+      },
+      "customer_psychology": {
+        "deep_fears": [
+          "Professional irrelevance in ageist workplace",
+          "Dating market rejection",
+          "Looking 'scary' without hair",
+          "Standing out negatively in virtual meetings"
+        ],
+        "pain_language": [
+          "I know it's shallow, but everytime I look in the mirror I want to cry",
+          "I'm not ageing well - without hair I actually look scary",
+          "The thought of standing up in front of a new class makes me feel queasy",
+          "I'm so sad about it and it's making me nervous and embarrassed to socialise"
+        ],
+        "success_language": [
+          "OMG, this is my new favourite place... Love love love",
+          "Everyone has been complimenting on how I am glowing!",
+          "The results speak for itself... truly unbelievable!",
+          "Has worked far better than any of the previous 6 PRP treatments"
+        ]
+      }
+    },
+    "competitor_analysis": {
+      "current_solutions": {
+        "minoxidil": {
+          "cost": "£15-25/month lifetime",
+          "satisfaction": "84.3% in studies but real-world disappointment",
+          "problems": "Daily application, scalp irritation, permanent use prison"
+        },
+        "finasteride": {
+          "cost": "£200 consultation + £15/month",
+          "effectiveness": "99% claimed",
+          "fears": "Sexual dysfunction side effects"
+        },
+        "hair_transplants": {
+          "cost": "£12,000 average UK",
+          "issues": "30-40% need second procedure",
+          "turkey_option": "70% savings but horror stories"
+        },
+        "botox_fillers": {
+          "cost": "£150-400 per area every 3-6 months",
+          "complaints": "2,083 botched procedures reported in 2020"
+        }
+      },
+      "failure_stories": [
+        "6 months and £1800 later, I saw zero results",
+        "After I stopped using it, I started losing hair at even greater rate",
+        "2k loss and clinic wants another 2k for transplant"
+      ]
+    },
+    "unique_angles": {
+      "historical_hooks": {
+        "ancient_wisdom": "3,000 years of blood healing from Egyptian priests to European royalty",
+        "military_heritage": "WWI plasma therapy saved millions of soldiers",
+        "victorian_paradox": "Aristocrats poisoned themselves seeking what PRP delivers safely"
+      },
+      "suppression_narrative": {
+        "patent_problem": "Can't patent human blood - Big Pharma ignores despite efficacy",
+        "lost_decades": "Growth factors confirmed in 1980s but buried for 30 years",
+        "insurance_conspiracy": "Refuse coverage to maintain pharmaceutical profits"
+      },
+      "blue_zones": {
+        "sardinia": "10x more centenarians than US with minimal hair loss",
+        "ikaria": "Zero dementia, 50% lower cardiovascular disease",
+        "hook": "Rediscover regenerative power before industrial poisoning"
+      }
+    },
+    "conversion_triggers": {
+      "objection_handlers": {
+        "too_expensive": {
+          "response": "Less than annual Regaine spending for permanent results",
+          "comparison": "Lifetime minoxidil costs exceed PRP packages"
+        },
+        "does_it_work": {
+          "response": "Military medical breakthrough refined for restoration",
+          "proof": "Growth factors scientifically proven since 1980s"
+        },
+        "pain_concerns": {
+          "response": "Comfort protocols and numbing options available",
+          "testimonial": "Much more comfortable than previous 6 treatments elsewhere"
+        }
+      },
+      "urgency_creators": [
+        "Richmond professionals discovering what Harley Street charges triple for",
+        "Limited appointments for GMC-registered doctor treatments",
+        "Price increase planned after initial client base established"
+      ],
+      "trust_builders": [
+        "MHRA compliant - only medical doctors",
+        "GMC-registered with two-stage consent",
+        "Full ASA advertising compliance"
+      ]
+    },
+    "messaging_framework": {
+      "headlines": {
+        "professional": "Boardroom Confidence Restoration",
+        "medical": "Military-Grade Plasma Therapy",
+        "natural": "Your Blood's Hidden Regenerative Power",
+        "discrete": "Quiet Confidence, Not Dramatic Transformation"
+      },
+      "positioning": {
+        "primary": "The thinking professional's choice for discrete restoration",
+        "secondary": "Medical-grade alternative to synthetic treatments",
+        "tertiary": "Richmond's premier GMC-registered PRP clinic"
+      },
+      "hooks": [
+        "The plasma therapy that saved millions in WWII, refined for you",
+        "Big Pharma can't patent your blood - that's why they hide PRP",
+        "What Blue Zone centenarians know about regeneration",
+        "Why Richmond's professionals choose us over Harley Street"
+      ]
+    },
+    "richmond_specifics": {
+      "demographics": {
+        "income": "£90,400 average household",
+        "education": "66.5% degree-educated",
+        "occupation": "72.5% professional roles",
+        "lifestyle": "Ranked #1 'Happy at Home' index"
+      },
+      "positioning_advantages": [
+        "Parking availability vs limited tube access",
+        "Local expertise vs Harley Street travel",
+        "Community reputation in professional networks",
+        "Discrete location for privacy"
+      ]
+    },
+    "regulatory_compliance": {
+      "requirements": [
+        "MHRA: Only medical doctors can administer",
+        "ASA: No celebrity endorsements or cure claims",
+        "GMC: Two-stage consent with cooling-off",
+        "CQC: Registration not required for cosmetic PRP"
+      ],
+      "trust_opportunity": "Position as 'fully compliant medical practice' vs beauty salons"
+    },
+    "conversation_hooks": {
+      "qualifying_questions": [
+        "Have you tried minoxidil or finasteride? What happened?",
+        "What would change if you had your hair confidence back?",
+        "Are you looking for hair restoration or facial rejuvenation?",
+        "What's holding you back - cost, effectiveness, or safety concerns?",
+        "Would payment plans make this accessible for you?"
+      ],
+      "value_statements": [
+        "Richmond professionals are getting results Harley Street charges triple for",
+        "Your own blood's growth factors - no chemicals or surgery",
+        "One PRP treatment often beats 6 elsewhere - it's about technique",
+        "GMC-registered doctors, not beauticians with weekend training",
+        "Military medical breakthrough now available for restoration"
+      ],
+      "story_angles": [
+        "Teacher who was queasy about facing her class - now confident",
+        "Executive who looked 'angry and mean' bald - approachable again",
+        "Woman who spent £1800 on lasers with zero results - PRP worked",
+        "Man avoiding dating for years - back in the game after PRP"
+      ]
+    }
+  }
+}

@@ -10,8 +10,9 @@ import { MarketingStories, getRelevantStory, CompetitorIntel, SpecificNumbers } 
 function getQuickBusinessInsight(domain: string, url: string) {
   const lower = domain.toLowerCase()
   
-  // HIFU/Beauty/Aesthetic treatments - MONEY QUESTION
-  if (lower.includes('hifu') || lower.includes('beauty') || lower.includes('aesthetic') || lower.includes('skin')) {
+  // HIFU/Beauty/Aesthetic/Body Contouring treatments - MONEY QUESTION
+  if (lower.includes('hifu') || lower.includes('beauty') || lower.includes('aesthetic') || lower.includes('skin') || 
+      lower.includes('sculpt') || lower.includes('contour') || lower.includes('lipo') || lower.includes('body')) {
     return {
       message: `I see you offer HIFU at ${domain}. Quick question - how much are you currently paying per lead from Facebook ads?`,
       detail: "Most HIFU clinics pay £50-150 but I know how to get them for £15",
@@ -228,6 +229,53 @@ export default function HomePage() {
     // AI WAKE UP SEQUENCE!
     await initializeAISystem(finalUrl)
     
+    // IMMEDIATELY START SCRAPING THE WEBSITE
+    setTimeout(async () => {
+      setFeedUpdates(prev => [...prev, {
+        id: `scraping_start_${Date.now()}`,
+        timestamp: new Date(),
+        type: 'discovery',
+        icon: '🔍',
+        message: 'Visiting your website now...',
+        detail: 'Analyzing content, structure, and industry',
+        impact: 'high'
+      }])
+      
+      try {
+        // Actually scrape the website
+        const scrapeResponse = await fetch('/api/scrape-website', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url: finalUrl })
+        })
+        
+        const scrapeData = await scrapeResponse.json()
+        
+        if (scrapeData.success) {
+          // Store scraped data globally
+          (window as any).scrapedWebsiteData = scrapeData
+          
+          // Show what we found
+          setFeedUpdates(prev => [...prev, {
+            id: `found_business_${Date.now()}`,
+            timestamp: new Date(),
+            type: 'success',
+            icon: '✅',
+            message: `Got it! ${scrapeData.businessType || 'Interesting business'}`,
+            detail: `${scrapeData.services || 'Multiple services found'} | ${scrapeData.isLandingPage ? 'Landing page' : 'Full website'}`,
+            impact: 'high'
+          }])
+          
+          // Start intelligent conversation based on REAL data
+          setTimeout(() => startIntelligentConversation(scrapeData), 3000)
+        }
+      } catch (error) {
+        console.log('Scrape failed, using domain detection')
+        // Fallback to domain-based conversation
+        setTimeout(() => startConversation(finalUrl), 3000)
+      }
+    }, 3000)
+    
     // Queue countdown with conversation
     const startQueueCountdown = () => {
       // After 8 seconds, move to position 4 (if started at 5+)
@@ -246,22 +294,6 @@ export default function HomePage() {
         }, 8000)
       }
       
-      // After 15 seconds, start conversation
-      setTimeout(() => {
-        setFeedUpdates(prev => [...prev, {
-          id: `ai_intro_${Date.now()}`,
-          timestamp: new Date(),
-          type: 'discovery',
-          icon: '👋',
-          message: "Hey! I'm Claude. Look, while we're waiting for your turn, mind if I ask you something?",
-          detail: "Honestly, this makes the analysis 10x better - help me help you here!",
-          impact: 'high'
-        }])
-        
-        // Start asking questions after intro
-        setTimeout(() => startConversation(finalUrl), 2000)
-      }, 15000)
-      
       // Continue queue updates
       setTimeout(() => {
         if (currentPosition > 3) {
@@ -276,7 +308,7 @@ export default function HomePage() {
             impact: 'high'
           }])
         }
-      }, 35000)
+      }, 25000)
       
       setTimeout(() => {
         if (currentPosition > 2) {
@@ -291,7 +323,7 @@ export default function HomePage() {
             impact: 'high'
           }])
         }
-      }, 55000)
+      }, 35000)
       
       setTimeout(() => {
         currentPosition = 1
@@ -300,19 +332,99 @@ export default function HomePage() {
           timestamp: new Date(),
           type: 'success',
           icon: '🎯',
-          message: "YOU'RE NEXT! Starting your analysis now...",
-          detail: "Thanks for chatting - this will make your results incredible!",
+          message: "Starting your personalized consultation now...",
+          detail: "Let me pull together everything I've learned about your business",
           impact: 'high'
         }])
         
-        // Actually start the analysis
-        setTimeout(() => proceedWithAiAnalysis(), 3000)
-      }, 75000)
+        // Actually start the analysis quickly
+        setTimeout(() => proceedWithAiAnalysis(), 2000)
+      }, 45000)
     }
     
     startQueueCountdown()
     
-    // Start conversation function (called from queue countdown)
+    // NEW: Intelligent conversation based on ACTUAL scraped data
+    const startIntelligentConversation = (scrapeData: any) => {
+      const { businessType, services, isLandingPage, headline, priceRange, mainCTA } = scrapeData
+      
+      // Create specific, intelligent opener based on what we ACTUALLY found
+      let intelligentOpener = ''
+      
+      if (businessType?.includes('body contouring') || services?.includes('fat reduction')) {
+        intelligentOpener = `I see you offer ${services} - interesting positioning with "${headline || 'your approach'}". The ${priceRange || 'pricing structure'} caught my attention.`
+      } else if (businessType?.includes('catering')) {
+        intelligentOpener = `Catering equipment - ${isLandingPage ? 'focused landing page' : 'comprehensive catalog'}. Your "${mainCTA || 'main offer'}" is interesting.`
+      } else if (services) {
+        intelligentOpener = `Just analyzed your site - ${services}. ${isLandingPage ? "Smart using a landing page for focused conversion" : "Full website with multiple services, interesting approach"}.`
+      } else {
+        intelligentOpener = `Interesting business model - ${headline || 'let me understand better what you offer'}.`
+      }
+      
+      // Show Claude coming back with REAL insights
+      setFeedUpdates(prev => [...prev, {
+        id: `claude_returns_${Date.now()}`,
+        timestamp: new Date(),
+        type: 'discovery',
+        icon: '👋',
+        message: intelligentOpener,
+        detail: "Now let me understand YOUR specific situation to give better insights",
+        impact: 'high'
+      }])
+      
+      // Ask intelligent question based on what we found
+      setTimeout(() => {
+        let intelligentQuestion = ''
+        let choices = []
+        
+        if (isLandingPage) {
+          intelligentQuestion = "Landing page detected - are you running paid traffic to this?"
+          choices = [
+            { value: 'yes-working', label: 'Yes, it\'s converting well' },
+            { value: 'yes-struggling', label: 'Yes, but conversions are low' },
+            { value: 'no-planning', label: 'Not yet, planning to' },
+            { value: 'no-organic', label: 'No, focusing on organic' }
+          ]
+        } else if (priceRange?.includes('high') || priceRange?.includes('premium')) {
+          intelligentQuestion = "Premium pricing strategy - smart. How's that working for lead quality?"
+          choices = [
+            { value: 'great', label: 'Great, quality over quantity' },
+            { value: 'tough', label: 'Tough, lots of price shoppers' },
+            { value: 'mixed', label: 'Mixed results' },
+            { value: 'testing', label: 'Still testing positioning' }
+          ]
+        } else {
+          intelligentQuestion = "What's your biggest challenge with this business right now?"
+          choices = [
+            { value: 'traffic', label: 'Not enough traffic' },
+            { value: 'conversion', label: 'Traffic doesn\'t convert' },
+            { value: 'competition', label: 'Heavy competition' },
+            { value: 'scaling', label: 'Ready to scale up' }
+          ]
+        }
+        
+        setFeedUpdates(prev => [...prev, {
+          id: `intelligent_question_${Date.now()}`,
+          timestamp: new Date(),
+          type: 'discovery',
+          icon: '💬',
+          message: intelligentQuestion,
+          detail: "This helps me give you specific, actionable insights",
+          impact: 'medium',
+          needsResponse: true,
+          multipleChoice: choices
+        }])
+        
+        setAiConversation(prev => ({
+          ...prev,
+          isWaitingForResponse: true,
+          currentQuestion: 'intelligent_opener',
+          step: 0
+        }))
+      }, 3000)
+    }
+    
+    // Original conversation function (fallback)
     const startConversation = (finalUrl: string) => {
       const domain = finalUrl.replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0]
       
@@ -328,32 +440,37 @@ export default function HomePage() {
       
       const story = getRelevantStory(businessType)
       
-      // Start with a real story, then interrupt with the question (Columbo style)
+      // Start with industry-specific insight, then ask natural question
+      const industryOpener = businessType === 'catering' || domain.includes('cater') 
+        ? "I see you're in catering equipment - tough market right now with restaurants still recovering from COVID."
+        : businessType !== 'universal' ? `Interesting - ${businessType} business. This industry is changing fast.`
+        : `Looking at ${domain} - let me understand your business better.`
+      
       setFeedUpdates(prev => [...prev, {
-        id: `story_start_${Date.now()}`,
+        id: `opener_${Date.now()}`,
         timestamp: new Date(),
         type: 'teaser',
-        icon: '💭',
-        message: story.setup,
-        detail: story.problem,
+        icon: '👋',
+        message: industryOpener,
+        detail: "While I analyze your site, let's chat - makes the insights way more relevant",
         impact: 'low'
       }])
       
       setTimeout(() => {
         setFeedUpdates(prev => [...prev, {
-          id: `story_interrupt_${Date.now()}`,
+          id: `natural_question_${Date.now()}`,
           timestamp: new Date(),
           type: 'discovery',
-          icon: '🤔',
-          message: "Actually wait - before I tell you what happened... what's YOUR ad spend situation?",
-          detail: "This will make the story way more relevant to you",
-          impact: 'high',
+          icon: '💬',
+          message: "Quick question - what's your current marketing situation?",
+          detail: "This helps me focus on what matters most to you",
+          impact: 'medium',
           needsResponse: true,
           multipleChoice: [
-            { value: 'none', label: 'Not running ads yet' },
-            { value: 'low', label: 'Under £500/month' },
-            { value: 'medium', label: '£500 - £2000/month' },
-            { value: 'high', label: 'Over £2000/month' }
+            { value: 'none', label: 'Just starting out' },
+            { value: 'struggling', label: 'Not getting results' },
+            { value: 'ok', label: 'Doing OK, want to scale' },
+            { value: 'crushing', label: 'Crushing it, looking for edge' }
           ]
         }])
       }, 2500)
@@ -421,8 +538,8 @@ export default function HomePage() {
           }])
         }, 22000)
         
-        // Run AI analysis in background (no scraping needed)
-        const aiResponse = await fetch('/api/ai-analysis', {
+        // Run REAL website analysis in background (with scraping!)
+        const aiResponse = await fetch('/api/analyze-website', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ 
@@ -705,7 +822,8 @@ export default function HomePage() {
     }])
     
     try {
-      // Call real AI conversation API
+      // Call real AI conversation API with full context
+      const backgroundData = (window as any).backgroundAnalysisResults
       const response = await fetch('/api/ai-conversation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -714,7 +832,13 @@ export default function HomePage() {
           context: {
             url: url,
             domain: url.replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0],
-            step: aiConversation.step
+            step: aiConversation.step,
+            businessType: backgroundData?.websiteData?.businessType || 'body contouring clinic',
+            services: backgroundData?.websiteData?.services || 'body contouring, fat reduction',
+            priceRange: backgroundData?.websiteData?.priceRange,
+            userName: aiConversation.leadData.name,
+            userChallenge: aiConversation.leadData.challenge,
+            userBusiness: aiConversation.leadData.business
           },
           conversationHistory: aiConversation.history
         })
@@ -727,6 +851,12 @@ export default function HomePage() {
         setFeedUpdates(prev => prev.filter(update => !update.id.includes('ai_thinking')))
         
         // Show AI's real response WITH the question included
+        // Only set needsResponse if the AI actually asked a question
+        const hasQuestion = aiData.response.includes('?') || 
+                           aiData.response.toLowerCase().includes('what') ||
+                           aiData.response.toLowerCase().includes('how') ||
+                           aiData.response.toLowerCase().includes('tell me')
+        
         setTimeout(() => {
           setFeedUpdates(prev => [...prev, {
             id: `ai_real_response_${Date.now()}`,
@@ -736,7 +866,7 @@ export default function HomePage() {
             message: `Claude: ${aiData.response}`,
             detail: "Real AI response tailored to your business",
             impact: 'high',
-            needsResponse: true  // This should trigger the input field
+            needsResponse: hasQuestion  // Only if AI asked a question
           }])
         }, 500)
         
@@ -773,17 +903,21 @@ export default function HomePage() {
           history: aiData.conversationHistory,
           responses: { ...prev.responses, [`step_${prev.step}`]: currentMessage },
           step: prev.step + 1,
-          isWaitingForResponse: true,  // Enable input field immediately
+          isWaitingForResponse: hasQuestion,  // Only wait if AI asked a question
           leadData: { ...prev.leadData, ...extractedData, url: url }
         }))
         
         // Continue conversation or proceed to analysis
         setTimeout(() => {
-          if (aiConversation.step >= 3) {
-            // Good conversation, now proceed with analysis
+          // Proceed to analysis after 2-3 good exchanges (was waiting too long)
+          if (aiConversation.step >= 2 && extractedData.challenge) {
+            // Got enough info, proceed with analysis
+            proceedWithAiAnalysis()
+          } else if (aiConversation.step >= 4) {
+            // Definitely proceed after 4 exchanges
             proceedWithAiAnalysis()
           }
-          // No need to set waiting state here - already set above
+          // Otherwise let conversation continue naturally
         }, 2000)
         
       }
@@ -1282,19 +1416,39 @@ export default function HomePage() {
           
           <div className="max-w-4xl mx-auto text-center relative z-10">
             {/* Main Heading */}
-            <h1 className="text-7xl md:text-8xl font-extralight text-white mb-6 leading-tight tracking-tight">
-              Convert visitors
+            <h1 className="text-6xl md:text-7xl font-extralight text-white mb-6 leading-tight tracking-tight">
+              Talk to a Marketing Expert
               <br />
               <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent italic font-light">
-                intelligently
+                for FREE
               </span>
             </h1>
             
             {/* Subheading */}
-            <p className="text-xl text-gray-400 font-light mb-16 max-w-2xl mx-auto leading-relaxed">
-              We find proven ads in your niche, analyze what's working, and craft 
-              engaging assessment tools that escape Facebook's learning phase fast.
+            <p className="text-xl text-gray-400 font-light mb-8 max-w-2xl mx-auto leading-relaxed">
+              Get £1000 worth of personalized marketing insights in 5 minutes. 
+              Our AI consultant knows your industry, your competitors, and exactly what's working right now.
             </p>
+            
+            {/* Value Props - What They Get */}
+            <div className="flex justify-center gap-8 mb-12 text-sm text-gray-500">
+              <div className="flex items-center gap-2">
+                <span className="text-green-400">✓</span>
+                <span>Competitor strategies</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-400">✓</span>
+                <span>Exact ad targeting</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-400">✓</span>
+                <span>Conversion tactics</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-400">✓</span>
+                <span>SLO strategies</span>
+              </div>
+            </div>
 
             {/* Input Section */}
             <div className="max-w-xl mx-auto">
@@ -1309,7 +1463,7 @@ export default function HomePage() {
                   type="text"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
-                  placeholder="yourcompetitor.com"
+                  placeholder="Enter your website (or a competitor's)"
                   className="w-full px-8 py-6 text-lg bg-gray-900/80 backdrop-blur border border-amber-500/30 rounded-full 
                            text-white focus:outline-none focus:border-amber-500/60 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300
                            placeholder:text-gray-500 placeholder:text-sm pr-36"
@@ -1324,7 +1478,7 @@ export default function HomePage() {
                       : 'absolute right-2 top-1/2 -translate-y-1/2 px-8 py-3 rounded-full font-bold transition-all duration-300 bg-gray-800 text-gray-600 cursor-not-allowed'
                   }
                 >
-                  Analyze
+                  Start Free Consultation
                 </button>
               </form>
               
@@ -1346,23 +1500,17 @@ export default function HomePage() {
                     if (!latestQuestion) return null
                     
                     return (
-                      <div className="mb-6 animate-slideDown">
+                      <div className="mb-4 animate-slideDown">
                         <div className="relative">
-                          {/* Glow Effect */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-amber-600/10 to-amber-500/10 rounded-2xl blur-xl"></div>
-                          
-                          {/* Question Card */}
-                          <div className="relative bg-gradient-to-r from-amber-500/10 to-amber-600/10 backdrop-blur-xl rounded-2xl border border-amber-500/30 p-6">
-                            <div className="flex items-start gap-4">
-                              {/* Claude Icon */}
-                              <div className="relative flex-shrink-0">
-                                <div className="absolute inset-0 bg-amber-500/30 rounded-full blur-lg"></div>
-                                <span className="relative text-2xl block animate-pulse-slow">🤖</span>
-                              </div>
+                          {/* Subtle Question Card - Less overwhelming */}
+                          <div className="relative bg-black/60 backdrop-blur-sm rounded-xl border border-amber-500/20 p-4">
+                            <div className="flex items-start gap-3">
+                              {/* Small Claude Icon */}
+                              <span className="text-lg opacity-80">💬</span>
                               
-                              {/* Question Content */}
+                              {/* Question Content - Compact */}
                               <div className="flex-1">
-                                <p className="text-white font-medium text-base mb-4">
+                                <p className="text-white text-sm mb-3">
                                   {latestQuestion.message.replace('Claude: ', '')}
                                 </p>
                                 
@@ -1376,9 +1524,9 @@ export default function HomePage() {
                                           setUserResponse(option.label)
                                           handleUserResponse()
                                         }}
-                                        className="p-3 bg-black/40 border border-amber-500/30 rounded-lg text-white hover:border-amber-500/60 hover:bg-amber-500/10 transition-all duration-300 text-left"
+                                        className="p-2 bg-black/40 border border-amber-500/20 rounded-lg text-white hover:border-amber-500/40 hover:bg-amber-500/5 transition-all duration-300 text-left"
                                       >
-                                        <span className="text-sm">{option.label}</span>
+                                        <span className="text-xs">{option.label}</span>
                                       </button>
                                     ))}
                                   </div>

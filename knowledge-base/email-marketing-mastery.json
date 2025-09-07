@@ -1,0 +1,232 @@
+{
+  "emailMarketingStats": {
+    "averageROI": "£42 for every £1 spent",
+    "openRates": {
+      "industry_average": "21.33%",
+      "bodyContouring": "24-28%",
+      "solarPV": "18-22%",
+      "b2b": "15-19%",
+      "ecommerce": "16-20%"
+    },
+    "clickRates": {
+      "industry_average": "2.62%",
+      "topPerformers": "7-10%",
+      "minimum_acceptable": "1.5%"
+    },
+    "conversionRates": {
+      "cold_email": "0.5-2%",
+      "warm_list": "5-15%",
+      "segmented": "10-25%",
+      "automated_flows": "15-30%"
+    }
+  },
+  
+  "winningStrategies": {
+    "subjectLines": {
+      "personalizedName": "26% higher open rates",
+      "emojis": "56% higher open rates when used sparingly",
+      "urgency": "22% higher opens with deadlines",
+      "questions": "Questions get 10% more opens",
+      "numbers": "Lists and numbers get 15% more opens",
+      "formulas": {
+        "curiosity": "{Benefit} without {Pain}",
+        "urgency": "Last chance: {Offer} ends {Time}",
+        "personal": "{FirstName}, quick question about {Topic}",
+        "news": "Breaking: {Industry} changes everything",
+        "howTo": "How {Competitor} gets {Result}"
+      }
+    },
+    
+    "sendTiming": {
+      "bestDays": "Tuesday, Thursday (10% higher opens)",
+      "bestTimes": {
+        "b2c": "8-9am, 12-1pm, 5-6pm",
+        "b2b": "10-11am, 2-3pm",
+        "ecommerce": "8pm-midnight"
+      },
+      "avoidTimes": "Monday morning, Friday afternoon",
+      "timezone": "Always send in recipient's timezone"
+    },
+    
+    "segmentation": {
+      "behavioral": "Past purchasers, cart abandoners, email engagers",
+      "demographic": "Age, location, gender, income",
+      "psychographic": "Interests, values, lifestyle",
+      "engagement": "Active, at-risk, dormant",
+      "value": "VIP, regular, potential",
+      "results": "Segmented campaigns get 14% higher opens, 100% higher clicks"
+    },
+    
+    "automation": {
+      "welcome": {
+        "timing": "Within 1 hour of signup",
+        "series": "3-5 emails over 2 weeks",
+        "conversion": "320% more revenue than single email"
+      },
+      "abandoned_cart": {
+        "timing": "1 hour, 24 hours, 72 hours",
+        "recovery_rate": "10-30% of abandoned carts",
+        "subject": "Did you forget something?"
+      },
+      "reEngagement": {
+        "trigger": "No opens in 90 days",
+        "offer": "Special discount or content",
+        "lastChance": "We'll miss you email"
+      },
+      "postPurchase": {
+        "thank_you": "Immediately",
+        "review_request": "7-14 days",
+        "upsell": "30 days",
+        "repurchase": "Based on product lifecycle"
+      }
+    }
+  },
+  
+  "contentFormulas": {
+    "problemAgitationSolution": {
+      "structure": "Identify problem → Make it hurt → Provide solution",
+      "bestFor": "Pain-aware audiences",
+      "example": "Struggling with leads? → Competition stealing clients → Our system fixes this"
+    },
+    
+    "beforeAfterBridge": {
+      "structure": "Current state → Desired state → How to get there",
+      "bestFor": "Transformation offers",
+      "example": "5 leads/month → 50 leads/month → Here's the exact system"
+    },
+    
+    "starStoryeSolution": {
+      "structure": "Attention grabber → Case study → Call to action",
+      "bestFor": "Success stories",
+      "example": "£50k in 30 days → How Sarah did it → Get the blueprint"
+    },
+    
+    "valueStack": {
+      "structure": "Main offer + Bonus 1 + Bonus 2 + Urgency",
+      "bestFor": "Promotions",
+      "example": "Course (£997) + Templates (£297) + Calls (£497) = £97 today only"
+    }
+  },
+  
+  "deliverabilitySecrets": {
+    "authentication": {
+      "SPF": "Sender Policy Framework - required",
+      "DKIM": "DomainKeys Identified Mail - required",
+      "DMARC": "Domain-based Message Authentication - recommended",
+      "impact": "30% better inbox placement with all three"
+    },
+    
+    "listHygiene": {
+      "cleaningFrequency": "Every 3-6 months",
+      "bounceThreshold": "Keep under 2%",
+      "unsubscribeRate": "Keep under 0.5%",
+      "spamComplaints": "Keep under 0.1%",
+      "engagement": "Remove non-openers after 6 months"
+    },
+    
+    "contentTriggers": {
+      "avoidWords": ["Free", "Guarantee", "Act now", "Limited time", "Risk-free"],
+      "avoidSymbols": "$$$ !!! ALL CAPS",
+      "imageRatio": "60% text, 40% images maximum",
+      "linkLimit": "3-5 links per email",
+      "preheader": "Always customize, never leave blank"
+    }
+  },
+  
+  "advancedTactics": {
+    "dynamicContent": {
+      "personalization": "Beyond {FirstName} - use behavior, preferences, history",
+      "productRecommendations": "Based on browsing/purchase history",
+      "contentBlocks": "Different content for different segments in same email",
+      "results": "20% higher transaction rates"
+    },
+    
+    "interactiveElements": {
+      "surveys": "In-email surveys get 5x response rate",
+      "countdown": "Urgency timers increase conversions 2x",
+      "gamification": "Scratch cards, spin wheels for engagement",
+      "AMP": "Interactive carousels, forms without leaving inbox"
+    },
+    
+    "testingFramework": {
+      "subjectLines": "Test every send, 20% sample",
+      "sendTimes": "Test by segment weekly",
+      "content": "One variable at a time",
+      "frequency": "Find sweet spot between engagement and fatigue",
+      "metrics": "Focus on revenue, not just opens"
+    }
+  },
+  
+  "industryBenchmarks": {
+    "aesthetics": {
+      "openRate": "24-28%",
+      "clickRate": "3-5%",
+      "bestContent": "Before/after photos, special offers",
+      "frequency": "2-3 per week optimal"
+    },
+    
+    "solar": {
+      "openRate": "18-22%",
+      "clickRate": "2-4%",
+      "bestContent": "Savings calculators, case studies",
+      "frequency": "1-2 per week"
+    },
+    
+    "healthcare": {
+      "openRate": "22-26%",
+      "clickRate": "2.5-4%",
+      "bestContent": "Educational, testimonials",
+      "frequency": "Weekly"
+    },
+    
+    "ecommerce": {
+      "openRate": "16-20%",
+      "clickRate": "2-3%",
+      "bestContent": "Product launches, sales",
+      "frequency": "3-5 per week for engaged"
+    }
+  },
+  
+  "revenueMaximization": {
+    "monetizationPoints": {
+      "welcome": "Offer within 48 hours",
+      "engagement": "Every 3rd email sells",
+      "reactivation": "Win-back campaigns",
+      "loyalty": "VIP early access",
+      "seasonal": "Holiday campaigns = 30% of annual revenue"
+    },
+    
+    "pricingPsychology": {
+      "anchoring": "Show original price crossed out",
+      "urgency": "Limited time or quantity",
+      "social_proof": "X people bought this",
+      "scarcity": "Only 3 left in stock",
+      "bundling": "Save more with packages"
+    }
+  },
+  
+  "emailToSMS": {
+    "integration": "Email non-openers get SMS",
+    "timing": "SMS 2 hours after email",
+    "conversion": "SMS converts 3x email",
+    "compliance": "Always get explicit consent"
+  },
+  
+  "legalCompliance": {
+    "GDPR": {
+      "consent": "Explicit opt-in required",
+      "data": "Right to be forgotten",
+      "location": "EU residents anywhere"
+    },
+    "CANSPAM": {
+      "unsubscribe": "Clear and easy",
+      "sender": "Real physical address",
+      "subject": "No misleading subjects"
+    },
+    "PECR": {
+      "uk_specific": "Similar to GDPR",
+      "softOptIn": "Previous customers exception",
+      "b2b": "Corporate emails allowed"
+    }
+  }
+}
