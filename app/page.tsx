@@ -1732,9 +1732,9 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-white mb-3">Find Winning Ads</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Analyze Your Competition</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                We manually research winning ads in your niche and build our own searchable database of proven performers
+                We analyze your competitors' websites, pricing, messaging, and strategies to reveal exactly how they're winning customers
               </p>
             </div>
             
@@ -1745,9 +1745,9 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-white mb-3">Build Assessment Tools</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Industry Insights</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Create engaging quizzes and calculators that Facebook's algorithm loves - escape learning phase in days, not weeks
+                Get specific data about your industry: average conversion rates, typical ad costs, proven messaging that works in your niche
               </p>
             </div>
             
@@ -1758,9 +1758,9 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-white mb-3">Craft Your Offer</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Growth Strategies</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Combine proven hooks with your unique value proposition to create an offer that converts at 3-5x industry average
+                Get personalized recommendations for improving your website, pricing, messaging, and marketing campaigns
               </p>
             </div>
           </div>
@@ -1774,48 +1774,36 @@ export default function HomePage() {
           
           <div className="relative z-10 max-w-4xl mx-auto">
             <h2 className="text-4xl font-extralight text-white mb-6">
-              Don't Let Facebook <span className="text-red-400">Hold You Hostage</span>
+              Stop Guessing. <span className="text-amber-400">Start Winning.</span>
             </h2>
             <p className="text-lg text-gray-400 mb-12">
-              Escape the learning phase prison with assessment tools that the algorithm actually rewards
+              Get the exact strategies your competitors use to dominate your market. No fluff, no theories - just actionable insights.
             </p>
 
-            {/* Facebook Behind Bars Widget */}
-            <div className="relative inline-block">
-              {/* Facebook Prisoner - Clean with your image */}
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-6 w-64 h-48 flex items-center justify-center shadow-2xl relative overflow-hidden">
-                {/* Prisoner Image */}
-                <img 
-                  src="/images/prisoner.png" 
-                  alt="Facebook Prisoner Behind Bars"
-                  className="w-full h-full object-contain"
-                />
-                
-                {/* Facebook 'f' logo badge */}
-                <div className="absolute top-4 right-4">
-                  <div className="text-white text-lg font-bold bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center shadow-lg">f</div>
-                </div>
+            {/* Value Visualization */}
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🕵️‍♂️</div>
+                <h4 className="text-white font-medium mb-2">Deep Analysis</h4>
+                <p className="text-sm text-gray-400">We dig into what your competitors are actually doing</p>
               </div>
               
-              {/* Chains */}
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                <div className="text-gray-500 text-2xl">⛓️</div>
-              </div>
-            </div>
-
-            {/* Freedom Arrow */}
-            <div className="mt-12 flex items-center justify-center gap-8">
-              <div className="text-2xl animate-bounce">🔓</div>
-              <div className="text-3xl text-amber-400">→</div>
               <div className="text-center">
-                <div className="text-2xl mb-2">📈</div>
-                <div className="text-sm text-green-400 font-medium">FREEDOM</div>
+                <div className="text-4xl mb-4">💡</div>
+                <h4 className="text-white font-medium mb-2">Smart Insights</h4>
+                <p className="text-sm text-gray-400">AI-powered recommendations based on real data</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl mb-4">🚀</div>
+                <h4 className="text-white font-medium mb-2">Instant Results</h4>
+                <p className="text-sm text-gray-400">Get actionable strategies you can implement today</p>
               </div>
             </div>
 
-            <div className="mt-8 text-center">
+            <div className="mt-12 text-center">
               <p className="text-sm text-gray-500 italic">
-                "I escaped Facebook's learning phase in 3 days using assessment widgets" - Sarah M.
+                "Got £12,000 worth of marketing insights in 5 minutes. This should be illegal." - Sarah M.
               </p>
             </div>
           </div>
@@ -1862,10 +1850,10 @@ export default function HomePage() {
           </div>
           <div className="relative z-10">
             <h2 className="text-5xl font-extralight text-white mb-8">
-              Ready for a <span className="text-amber-400">real analysis</span>?
+              Ready to <span className="text-amber-400">dominate your market</span>?
             </h2>
             <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-              Stop guessing. Get expert manual research that actually works.
+              Get the £1000+ marketing consultation that reveals exactly how to beat your competition.
             </p>
             <button 
               onClick={() => setShowTicketModal(true)}
@@ -1873,10 +1861,10 @@ export default function HomePage() {
                        font-medium hover:shadow-xl hover:shadow-amber-500/25 hover:scale-105 transition-all duration-300
                        text-sm tracking-wide cursor-pointer"
             >
-              Take a Ticket - Get Manual Analysis
+              Start My Free Marketing Audit
             </button>
             <p className="text-xs text-gray-600 mt-6">
-              24-hour delivery • Real human research • Only 5 spots left this week
+              Instant analysis • No signup required • £1000+ value guaranteed
             </p>
           </div>
         </div>
