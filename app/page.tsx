@@ -1416,18 +1416,17 @@ export default function HomePage() {
           
           <div className="max-w-4xl mx-auto text-center relative z-10">
             {/* Main Heading */}
-            <h1 className="text-6xl md:text-7xl font-extralight text-white mb-6 leading-tight tracking-tight">
-              Talk to a Marketing Expert
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              How To Legally Steal Your 
               <br />
-              <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent italic font-light">
-                for FREE
+              <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                Competitor's Marketing Playbook
               </span>
             </h1>
             
-            {/* Subheading */}
-            <p className="text-xl text-gray-400 font-light mb-8 max-w-2xl mx-auto leading-relaxed">
-              Get £1000 worth of personalized marketing insights in 5 minutes. 
-              Our AI consultant knows your industry, your competitors, and exactly what's working right now.
+            {/* Subheading - Tight and powerful */}
+            <p className="text-xl text-gray-300 font-normal mb-8 max-w-2xl mx-auto leading-relaxed">
+              Free tool reveals their prices, strategies, and exactly why customers choose them over you.
             </p>
             
             {/* Value Props - What They Get */}
@@ -1478,7 +1477,7 @@ export default function HomePage() {
                       : 'absolute right-2 top-1/2 -translate-y-1/2 px-8 py-3 rounded-full font-bold transition-all duration-300 bg-gray-800 text-gray-600 cursor-not-allowed'
                   }
                 >
-                  Start Free Consultation
+                  Analyse Now
                 </button>
               </form>
               
@@ -1708,7 +1707,12 @@ export default function HomePage() {
               
               {!isAnalyzing && (
                 <p className="text-xs text-gray-500 mt-4">
-                  No credit card required • Setup in 60 seconds
+                  No credit card • No BS • Just raw intelligence
+                </p>
+                
+                {/* Carlton-style PS */}
+                <p className="text-sm text-amber-400/80 mt-6 italic">
+                  P.S. - They're already spying on you. Time to return the favor.
                 </p>
               )}
             </div>
@@ -1861,7 +1865,7 @@ export default function HomePage() {
                        font-medium hover:shadow-xl hover:shadow-amber-500/25 hover:scale-105 transition-all duration-300
                        text-sm tracking-wide cursor-pointer"
             >
-              Start My Free Marketing Audit
+              Analyse My Competition Now
             </button>
             <p className="text-xs text-gray-600 mt-6">
               Instant analysis • No signup required • £1000+ value guaranteed
