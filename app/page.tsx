@@ -1417,35 +1417,35 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              How To Legally Steal Your 
+              Why Your Ads Aren't Working
               <br />
               <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
-                Competitor's Marketing Playbook
+                (Hint: It's Not The Ads)
               </span>
             </h1>
             
-            {/* Subheading - Tight and powerful */}
+            {/* Subheading - The truth bomb */}
             <p className="text-xl text-gray-300 font-normal mb-8 max-w-2xl mx-auto leading-relaxed">
-              Free tool reveals their prices, strategies, and exactly why customers choose them over you.
+              Your website is killing your conversions. I'll show you exactly what's broken and how to fix it using proven templates that actually work.
             </p>
             
             {/* Value Props - What They Get */}
             <div className="flex justify-center gap-8 mb-12 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                <span>Competitor strategies</span>
+                <span>Conversion diagnosis</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                <span>Exact ad targeting</span>
+                <span>Winning templates</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                <span>Conversion tactics</span>
+                <span>Better offers</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                <span>SLO strategies</span>
+                <span>Clear CTAs</span>
               </div>
             </div>
 
@@ -1712,7 +1712,7 @@ export default function HomePage() {
                 
                 {/* Carlton-style PS */}
                 <p className="text-sm text-amber-400/80 mt-6 italic">
-                  P.S. - They're already spying on you. Time to return the favor.
+                  P.S. - Most agencies charge £2k+ for this. I'm doing it free because broken websites make me angry.
                 </p>
               )}
             </div>
@@ -1736,9 +1736,9 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-white mb-3">Analyze Your Competition</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Website Diagnosis</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                We analyze your competitors' websites, pricing, messaging, and strategies to reveal exactly how they're winning customers
+                Find out exactly why visitors aren't converting - confusing messaging, weak CTAs, or buried offers
               </p>
             </div>
             
@@ -1749,9 +1749,9 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-white mb-3">Industry Insights</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Winning Templates</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Get specific data about your industry: average conversion rates, typical ad costs, proven messaging that works in your niche
+                See what's actually working in your industry - pages that convert, offers that sell, and CTAs that get clicked
               </p>
             </div>
             
@@ -1762,9 +1762,9 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-white mb-3">Growth Strategies</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Build Better Offers</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Get personalized recommendations for improving your website, pricing, messaging, and marketing campaigns
+                Create SLOs, assessment tools, and landing pages that actually convert paid traffic into customers
               </p>
             </div>
           </div>
