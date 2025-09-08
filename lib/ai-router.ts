@@ -107,12 +107,16 @@ export function detectConversationType(
     return 'technical'
   }
   
-  // Closing signals
+  // Closing signals - Time to book the call!
   if (lowerMessage.includes('ready') ||
       lowerMessage.includes('let\'s do') ||
       lowerMessage.includes('sign up') ||
       lowerMessage.includes('get started') ||
-      historyLength > 10) {
+      lowerMessage.includes('show me') ||
+      lowerMessage.includes('interested') ||
+      lowerMessage.includes('book') ||
+      lowerMessage.includes('call') ||
+      historyLength > 6) { // Book earlier - after 6 messages
     return 'closing'
   }
   

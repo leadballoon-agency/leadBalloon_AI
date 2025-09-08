@@ -1407,7 +1407,7 @@ export default function HomePage() {
 
       {/* Hero Section - Dark & Elegant */}
       <div className="container mx-auto px-4">
-        <div className="min-h-screen flex flex-col justify-center items-center relative">
+        <div className="min-h-[80vh] sm:min-h-screen flex flex-col justify-center items-center relative py-8 sm:py-0">
           {/* Background Glow Effect */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-amber-500/20 rounded-full blur-3xl"></div>
@@ -1416,7 +1416,7 @@ export default function HomePage() {
           
           <div className="max-w-4xl mx-auto text-center relative z-10">
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Why Your Ads Aren't Working
               <br />
               <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
@@ -1425,12 +1425,12 @@ export default function HomePage() {
             </h1>
             
             {/* Subheading - The truth bomb */}
-            <p className="text-xl text-gray-300 font-normal mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-300 font-normal mb-8 max-w-2xl mx-auto leading-relaxed px-4">
               Your website is killing your conversions. I'll show you exactly what's broken and how to fix it using proven templates that actually work.
             </p>
             
             {/* Value Props - What They Get */}
-            <div className="flex justify-center gap-8 mb-12 text-sm text-gray-500">
+            <div className="grid grid-cols-2 sm:flex sm:justify-center gap-4 sm:gap-8 mb-12 text-sm text-gray-500 px-4">
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
                 <span>Conversion diagnosis</span>
@@ -1450,7 +1450,7 @@ export default function HomePage() {
             </div>
 
             {/* Input Section */}
-            <div className="max-w-xl mx-auto">
+            <div className="max-w-xl mx-auto px-4">
               <form 
                 onSubmit={(e) => {
                   e.preventDefault()
@@ -1463,9 +1463,9 @@ export default function HomePage() {
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   placeholder="Enter your website (or a competitor's)"
-                  className="w-full px-8 py-6 text-lg bg-gray-900/80 backdrop-blur border border-amber-500/30 rounded-full 
+                  className="w-full px-4 sm:px-8 py-4 sm:py-6 text-base sm:text-lg bg-gray-900/80 backdrop-blur border border-amber-500/30 rounded-full 
                            text-white focus:outline-none focus:border-amber-500/60 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300
-                           placeholder:text-gray-500 placeholder:text-sm pr-36"
+                           placeholder:text-gray-500 placeholder:text-xs sm:placeholder:text-sm pr-24 sm:pr-36"
                   autoFocus
                 />
                 <button
@@ -1473,11 +1473,12 @@ export default function HomePage() {
                   disabled={!url}
                   className={
                     url
-                      ? 'absolute right-2 top-1/2 -translate-y-1/2 px-8 py-3 rounded-full font-bold transition-all duration-300 bg-gradient-to-r from-amber-400 to-amber-600 text-gray-900 hover:shadow-lg hover:shadow-amber-500/25 hover:scale-105 cursor-pointer'
-                      : 'absolute right-2 top-1/2 -translate-y-1/2 px-8 py-3 rounded-full font-bold transition-all duration-300 bg-gray-800 text-gray-600 cursor-not-allowed'
+                      ? 'absolute right-2 top-1/2 -translate-y-1/2 px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-base rounded-full font-bold transition-all duration-300 bg-gradient-to-r from-amber-400 to-amber-600 text-gray-900 hover:shadow-lg hover:shadow-amber-500/25 hover:scale-105 cursor-pointer'
+                      : 'absolute right-2 top-1/2 -translate-y-1/2 px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-base rounded-full font-bold transition-all duration-300 bg-gray-800 text-gray-600 cursor-not-allowed'
                   }
                 >
-                  Analyse Now
+                  <span className="hidden sm:inline">Analyse Now</span>
+                  <span className="sm:hidden">Analyse</span>
                 </button>
               </form>
               
