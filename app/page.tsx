@@ -1506,7 +1506,7 @@ export default function HomePage() {
                   type="text"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
-                  placeholder="Enter your website (or a competitor's)"
+                  placeholder="yourwebsite.com"
                   className="w-full px-4 sm:px-8 py-4 sm:py-6 text-base sm:text-lg bg-gray-900/80 backdrop-blur border border-amber-500/30 rounded-full 
                            text-white focus:outline-none focus:border-amber-500/60 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300
                            placeholder:text-gray-500 placeholder:text-xs sm:placeholder:text-sm pr-24 sm:pr-36"
@@ -1526,6 +1526,10 @@ export default function HomePage() {
                 </button>
               </form>
               
+              {/* Free now but not forever notice */}
+              <p className="text-center text-xs sm:text-sm text-amber-500/80 mt-3 font-light">
+                Free now but not forever
+              </p>
               
               {/* Live Feed Display - SUPER ELEGANT */}
               {isAnalyzing && (
