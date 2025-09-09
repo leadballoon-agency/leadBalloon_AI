@@ -71,6 +71,7 @@ export default function HomePage() {
   const [feedUpdates, setFeedUpdates] = useState<FeedUpdate[]>([])
   const [currentPause, setCurrentPause] = useState<InteractivePause | null>(null)
   const [userAnswers, setUserAnswers] = useState<Record<string, any>>({})
+  const [isScrolled, setIsScrolled] = useState(false)
   
   // Ticket system state
   const [showTicketModal, setShowTicketModal] = useState(false)
@@ -124,6 +125,15 @@ export default function HomePage() {
   const interactiveFeed = new InteractiveFeedSystem()
   const authenticJourney = useRef(new AuthenticJourney())
   const queueManager = useRef(new QueueManager())
+  
+  // Handle scroll for navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   
   // Auto-scroll to bottom when new updates come in
   useEffect(() => {
@@ -1391,24 +1401,54 @@ export default function HomePage() {
   // Component return statement
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-x-hidden">
-      {/* Minimal Navigation */}
-      <nav className="absolute top-0 w-full p-8 z-10">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-extralight tracking-wider">
-            <span className="text-amber-400">Lead</span>
-            <span className="text-amber-600">Balloon</span>
-          </div>
-          <div className="flex gap-8 text-sm text-gray-400">
-            <a href="#" className="hover:text-amber-400 transition-colors">Documentation</a>
-            <a href="#" className="hover:text-amber-400 transition-colors">Pricing</a>
-            <a href="/admin/login" className="hover:text-amber-400 transition-colors">Sign In</a>
+      {/* Glassmorphism Navigation - Only Shows on Scroll */}
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 transform ${
+        isScrolled 
+          ? 'translate-y-0 opacity-100' 
+          : '-translate-y-full opacity-0'
+      }`}>
+        <div className={`backdrop-blur-2xl bg-black/70 border-b border-white/10 shadow-2xl shadow-black/50`}>
+          <div className="container mx-auto px-4 py-3 sm:py-4 flex justify-between items-center">
+            {/* Logo - Smaller on mobile */}
+            <div className="font-light tracking-wider">
+              <span className="text-amber-400 text-sm sm:text-base md:text-lg">Lead</span>
+              <span className="text-amber-600 text-sm sm:text-base md:text-lg">Balloon</span>
+              <span className="text-white/30 text-xs ml-1 hidden sm:inline">AI</span>
+            </div>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden sm:flex items-center gap-6">
+              <a href="#how" className="text-white/60 hover:text-white transition-colors text-sm">How It Works</a>
+              <a href="#testimonials" className="text-white/60 hover:text-white transition-colors text-sm">Results</a>
+              <a href="#analyze" className="bg-gradient-to-r from-amber-500 to-amber-600 text-black px-5 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-amber-500/25 transition-all text-sm">
+                Analyze My Site
+              </a>
+            </div>
+            
+            {/* Mobile CTA */}
+            <a href="#analyze" className="sm:hidden bg-gradient-to-r from-amber-500 to-amber-600 text-black px-4 py-1.5 rounded-full text-xs font-semibold">
+              Free Analysis
+            </a>
           </div>
         </div>
       </nav>
+      
+      {/* Static Header - Shows Initially, Hides on Scroll */}
+      <header className={`fixed top-0 w-full z-40 transition-all duration-500 ${
+        isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+      }`}>
+        <div className="container mx-auto px-4 py-4 sm:py-6">
+          <div className="font-light tracking-wider">
+            <span className="text-amber-400 text-base sm:text-xl md:text-2xl">Lead</span>
+            <span className="text-amber-600 text-base sm:text-xl md:text-2xl">Balloon</span>
+            <span className="text-white/30 text-xs sm:text-sm ml-2">AI</span>
+          </div>
+        </div>
+      </header>
 
-      {/* Hero Section - Dark & Elegant */}
+      {/* Hero Section - Full Viewport */}
       <div className="w-full max-w-7xl mx-auto px-4">
-        <div className="min-h-[70vh] sm:min-h-screen flex flex-col justify-center items-center relative py-8 sm:py-0">
+        <div className="min-h-screen flex flex-col justify-center items-center relative pt-20 sm:pt-0">
           {/* Background Glow Effect */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-amber-500/20 rounded-full blur-3xl"></div>
