@@ -1388,6 +1388,7 @@ export default function HomePage() {
     }
   }
 
+  // Component return statement
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       {/* Minimal Navigation */}
@@ -1707,14 +1708,16 @@ export default function HomePage() {
               )}
               
               {!isAnalyzing && (
-                <p className="text-xs text-gray-500 mt-4">
-                  No credit card • No BS • Just raw intelligence
-                </p>
-                
-                {/* Carlton-style PS */}
-                <p className="text-sm text-amber-400/80 mt-6 italic">
-                  P.S. - Most agencies charge £2k+ for this. I'm doing it free because broken websites make me angry.
-                </p>
+                <>
+                  <p className="text-xs text-gray-500 mt-4">
+                    No credit card • No BS • Just raw intelligence
+                  </p>
+                  
+                  {/* Carlton-style PS */}
+                  <p className="text-sm text-amber-400/80 mt-6 italic">
+                    P.S. - Most agencies charge £2k+ for this. I'm doing it free because broken websites make me angry.
+                  </p>
+                </>
               )}
             </div>
           </div>
