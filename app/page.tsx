@@ -1390,7 +1390,7 @@ export default function HomePage() {
 
   // Component return statement
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-x-hidden">
       {/* Minimal Navigation */}
       <nav className="absolute top-0 w-full p-8 z-10">
         <div className="container mx-auto flex justify-between items-center">
@@ -1407,10 +1407,10 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section - Dark & Elegant */}
-      <div className="container mx-auto px-4">
-        <div className="min-h-[80vh] sm:min-h-screen flex flex-col justify-center items-center relative py-8 sm:py-0">
+      <div className="w-full max-w-7xl mx-auto px-4">
+        <div className="min-h-[70vh] sm:min-h-screen flex flex-col justify-center items-center relative py-8 sm:py-0">
           {/* Background Glow Effect */}
-          <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-amber-500/20 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-amber-600/20 rounded-full blur-3xl"></div>
           </div>
@@ -1418,20 +1418,23 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Why Your Ads Aren't Working
+              <span className="hidden sm:inline">Why Your Ads Aren't Working</span>
+              <span className="sm:hidden">Fix Your Broken Website</span>
               <br />
               <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
-                (Hint: It's Not The Ads)
+                <span className="hidden sm:inline">(Hint: It's Not The Ads)</span>
+                <span className="sm:hidden">Free Analysis</span>
               </span>
             </h1>
             
             {/* Subheading - The truth bomb */}
-            <p className="text-lg sm:text-xl text-gray-300 font-normal mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-              Your website is killing your conversions. I'll show you exactly what's broken and how to fix it using proven templates that actually work.
+            <p className="text-base sm:text-xl text-gray-300 font-normal mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
+              <span className="hidden sm:inline">Your website is killing your conversions. I'll show you exactly what's broken and how to fix it using proven templates that actually work.</span>
+              <span className="sm:hidden">See what's killing your conversions</span>
             </p>
             
             {/* Value Props - What They Get */}
-            <div className="grid grid-cols-2 sm:flex sm:justify-center gap-4 sm:gap-8 mb-12 text-sm text-gray-500 px-4">
+            <div className="hidden sm:flex justify-center gap-8 mb-12 text-sm text-gray-500 px-4">
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
                 <span>Conversion diagnosis</span>
@@ -1451,7 +1454,7 @@ export default function HomePage() {
             </div>
 
             {/* Input Section */}
-            <div className="max-w-xl mx-auto px-4">
+            <div className="w-full max-w-xl mx-auto px-4">
               <form 
                 onSubmit={(e) => {
                   e.preventDefault()
@@ -1710,11 +1713,12 @@ export default function HomePage() {
               {!isAnalyzing && (
                 <>
                   <p className="text-xs text-gray-500 mt-4">
-                    No credit card • No BS • Just raw intelligence
+                    <span className="hidden sm:inline">No credit card • No BS • Just raw intelligence</span>
+                    <span className="sm:hidden">100% Free • No BS</span>
                   </p>
                   
-                  {/* Carlton-style PS */}
-                  <p className="text-sm text-amber-400/80 mt-6 italic">
+                  {/* Carlton-style PS - Hide on mobile */}
+                  <p className="hidden sm:block text-sm text-amber-400/80 mt-6 italic">
                     P.S. - Most agencies charge £2k+ for this. I'm doing it free because broken websites make me angry.
                   </p>
                 </>
